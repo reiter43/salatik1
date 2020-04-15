@@ -1,0 +1,68 @@
+/*=============================================
+      ОБЩИЕ ПРАВИЛА
+  =============================================*/
+$font-family-days: Days, Arial, sans-serif;
+$font-family-roboto: Roboto, Arial, sans-serif;
+
+$ct-light-gray: #f4f4f4;
+$ct-black: #444444;
+$ct-gray-lines: rgba(68, 68, 68, 0.2);
+$ct-semi-black: rgba(68, 68, 68, 0.6);
+$ct-green: #2e8b42;
+$ct-orange: #f2994a;
+$ct-dark-gray: #c4c4c4;
+$ct-white: #ffffff;
+$cf-white: #ffffff;
+$cf-gray: #e4e4e4;
+$cf-gray2: #e5e5e5;
+$cf-gray3:  #f8f8f8;
+$cf-light-gray: #f4f4f4;
+$cf-green: #2e8b42;
+$cf-dark-green: #3a884b;
+$cf-black: #444444;
+
+
+
+*:focus {
+    outline: 3px solid pink;
+}
+
+.wrapper {
+    @include wrapper;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+    background: $ct-gray-lines;
+    font-family: $font-family-days;
+    font-size: 16px;
+    line-height: 1.375;
+    font-weight: 400;
+}
+
+p,
+u,
+li,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+
+/*=============================================*/

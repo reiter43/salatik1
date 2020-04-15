@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>@title</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-topline">
+            <div class="wrapper header-topline__wrap">
+                <a href="#" class="logo">SALATIK</a>
+
+                <form class="form-search" aria-labelledby="form-search-1__title">
+                    <h4 class="visually-hidden" id="form-search-1__title">Форма для поиска рецептов на главной</h4>
+                    <label class="visually-hidden" for="search-input-1">Поле поиска рецептов (обязательное поле)</label>
+                    <input class="search-input" type="search" name="Поиск" id="search-input-1" placeholder="Поиск рецептов" required>
+                    <button class="form-search__button" aria-label="Поиск">
+                        <svg class="form-search__icon">
+                            <use xlink:href="img/svg/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
+
+                <nav class="nav-site" aria-label="Навигация по сайту">
+                    <ul class="nav-site__list">
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">Новости</a>
+                        </li>
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">О блоге</a>
+                        </li>
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">Реклама</a>
+                        </li>
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">Контакты</a>
+                        </li>
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">Разное</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <button class="btn">Вход</button>
+
+                <a href="#" class="header__link-login" aria-label="Переход на страницу регистрации">Регистрация</a>
+            </div>
+        </div>
+
+        <div class="header-downline">
+            <nav class="nav" aria-label="Навигация по контенту">
+                <ul class="nav__list" role="menubar">
+                    <li class="nav__item" role="none presentation">
+                        <button class="nav__link btn-icon" aria-expanded="false" aria-haspopup="true">
+                            <span>Салаты</span>
+                            <svg aria-hidden="true" focusable="false">
+                                <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </button>
+                        <ul class="nav__sublist" role="menu">
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Мясные</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Овощные</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Рыбные</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Морепродукты</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Фруктовые</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Ассорти</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Сладкие</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Постные</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Птица</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <button class="nav__link btn-icon" aria-expanded="false" aria-haspopup="true">
+                            <span>Бутерброды</span>
+                            <svg aria-hidden="true" focusable="false">
+                                <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </button>
+                        <ul class="nav__sublist nav__sublist--buter" role="menu">
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Овощи и зелень</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Грибные</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">С сыром</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Рыба</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Морепродукты</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">С колбасой</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Мясные</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Двойные (сэндвичи)</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <a href="#" class="nav__link" role="menuitem">Канапе</a>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <a href="#" class="nav__link" role="menuitem">Гренки</a>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <a href="#" class="nav__link" role="menuitem">Тосты</a>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <a href="#" class="nav__link" role="menuitem">Тартинки</a>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <a href="#" class="nav__link" role="menuitem">Закуски</a>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <a href="#" class="nav__link" role="menuitem">Заправки</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>

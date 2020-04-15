@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Салатик</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-topline">
+            <div class="wrapper header-topline__wrap">
+                <a href="#" class="logo">SALATIK</a>
+
+                <form class="form-search" aria-labelledby="form-search-1__title">
+                    <h4 class="visually-hidden" id="form-search-1__title">Форма для поиска рецептов на главной</h4>
+                    <label class="visually-hidden" for="search-input-1">Поле поиска рецептов (обязательное поле)</label>
+                    <input class="search-input" type="search" name="Поиск" id="search-input-1" placeholder="Поиск рецептов" required>
+                    <button class="form-search__button" aria-label="Поиск">
+                        <svg class="form-search__icon">
+                            <use xlink:href="img/svg/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
+
+                <nav class="nav-site" aria-label="Навигация по сайту">
+                    <ul class="nav-site__list">
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">Новости</a>
+                        </li>
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">О блоге</a>
+                        </li>
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">Реклама</a>
+                        </li>
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">Контакты</a>
+                        </li>
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">Разное</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <button class="btn">Вход</button>
+
+                <a href="#" class="header__link-login" aria-label="Переход на страницу регистрации">Регистрация</a>
+            </div>
+        </div>
+
+        <div class="header-downline">
+            <nav class="nav" aria-label="Навигация по контенту">
+                <ul class="nav__list" role="menubar">
+                    <li class="nav__item" role="none presentation">
+                        <button class="nav__link btn-icon" aria-expanded="false" aria-haspopup="true">
+                            <span>Салаты</span>
+                            <svg aria-hidden="true" focusable="false">
+                                <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </button>
+                        <ul class="nav__sublist" role="menu">
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Мясные</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Овощные</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Рыбные</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Морепродукты</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Фруктовые</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Ассорти</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Сладкие</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Постные</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Птица</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <button class="nav__link btn-icon" aria-expanded="false" aria-haspopup="true">
+                            <span>Бутерброды</span>
+                            <svg aria-hidden="true" focusable="false">
+                                <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </button>
+                        <ul class="nav__sublist nav__sublist--buter" role="menu">
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Овощи и зелень</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Грибные</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">С сыром</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Рыба</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Морепродукты</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">С колбасой</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Мясные</a>
+                            </li>
+                            <li class="nav__subitem" role="none presentation">
+                                <a href="#" class="nav__sublink" role="menuitem">Двойные (сэндвичи)</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <a href="#" class="nav__link" role="menuitem">Канапе</a>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <a href="#" class="nav__link" role="menuitem">Гренки</a>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <a href="#" class="nav__link" role="menuitem">Тосты</a>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <a href="#" class="nav__link" role="menuitem">Тартинки</a>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <a href="#" class="nav__link" role="menuitem">Закуски</a>
+                    </li>
+                    <li class="nav__item" role="none presentation">
+                        <a href="#" class="nav__link" role="menuitem">Заправки</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<main>
+    <section class="slider">
+        <div class="container-controls">
+            <button id="slider__arrow-left" class="btn-control" aria-label="Стрелка перелистывания слайдера назад" aria-controls="slider">
+                <svg>
+                    <use xlink:href="img/svg/sprite.svg#next-slider"></use>
+                </svg>
+            </button>
+            <button id="slider__arrow-rigth" class="btn-control" aria-label="Стрелка перелистывания слайдера вперед" aria-controls="slider">
+                <svg>
+                    <use xlink:href="img/svg/sprite.svg#prev-slider"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="slider__container owl-carousel" id="slider">
+            <div class="slider__item" style="background-image: url(./img/images/bg-slider.jpg);">
+                <h1 class="title-site">Салаты<span>на все случаи жизни</span></h1>
+            </div>
+            <div class="slider__item" style="background-image: url(./img/images/bg-slider.jpg);">
+                <h1 class="title-site">Салаты<span>на все случаи жизни2</span></h1>
+            </div>
+            <div class="slider__item" style="background-image: url(./img/images/bg-slider.jpg);">
+                <h1 class="title-site">Салаты<span>на все случаи жизни3</span></h1>
+            </div>
+            <div class="slider__item" style="background-image: url(./img/images/bg-slider.jpg);">
+                <h1 class="title-site">Салаты<span>на все случаи жизни4</span></h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="review">
+        <h3 class="title-section review__title-section">Смотрите в этом блоге</h3>
+        <div class="wrapper">
+            <div class="review__content">
+                <figure class="review__item">
+                    <div class="review__img">
+                        <svg role="img" aria-label="Салатница">
+                            <use xlink:href="img/svg/sprite.svg#review-icon-1"></use>
+                        </svg>
+                    </div>
+                    <figcaption class="review__desc">Лучшие весенние салаты</figcaption>
+                </figure>
+                <figure class="review__item">
+                    <div class="review__img">
+                        <svg role="img" aria-label="Весы">
+                            <use xlink:href="img/svg/sprite.svg#review-icon-2"></use>
+                        </svg>
+                    </div>
+                    <figcaption class="review__desc">Салаты для похудения</figcaption>
+                </figure>
+                <figure class="review__item">
+                    <div class="review__img">
+                        <svg role="img" aria-label="Столовые приборы">
+                            <use xlink:href="img/svg/sprite.svg#review-icon-3"></use>
+                        </svg>
+                    </div>
+                    <figcaption class="review__desc">Кулинарные секреты</figcaption>
+                </figure>
+                <figure class="review__item">
+                    <div class="review__img">
+                        <svg role="img" aria-label="Кулинарная книга">
+                            <use xlink:href="img/svg/sprite.svg#review-icon-4"></use>
+                        </svg>
+                    </div>
+                    <figcaption class="review__desc">И много других полезных рецептов</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="review__down"></div>
+    </section>
+
+    <section class="recept-review">
+        <h3 class="title-section visually-hidden">Обзор различных рецептов</h3>
+        <div class="wrapper">
+            <div class="recept-review__content">
+                <figure class="recept">
+                    <figcaption class="recept__desc">
+                        <h5 class="title-recept">Салат с рукколой</h5>
+                        <p class="recept__slogan">Наслаждайся вкусным салатом каждый день</p>
+                    </figcaption>
+                    <div class="recept__img">
+                        <picture>
+                            <source srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" type="image/webp">
+                            <img class="lazyload" src="img/images/recept-img-1.jpg" srcset="img/images/2x/recept-img-1-2x.jpg 2x" alt="Салат с рукколой">
+                        </picture>
+                    </div>
+                </figure>
+                <figure class="recept">
+                    <figcaption class="recept__desc">
+                        <h5 class="title-recept">Салат с рукколой</h5>
+                        <p class="recept__slogan">Наслаждайся вкусным салатом каждый день</p>
+                    </figcaption>
+                    <div class="recept__img">
+                        <picture>
+                            <source srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" type="image/webp">
+                            <img class="lazyload" src="img/images/recept-img-1.jpg" srcset="img/images/2x/recept-img-1-2x.jpg 2x" alt="Салат с рукколой">
+                        </picture>
+                    </div>
+                </figure>
+                <figure class="recept">
+                    <figcaption class="recept__desc">
+                        <h5 class="title-recept">Салат с рукколой</h5>
+                        <p class="recept__slogan">Наслаждайся вкусным салатом каждый день</p>
+                    </figcaption>
+                    <div class="recept__img">
+                        <picture>
+                            <source srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" type="image/webp">
+                            <img class="lazyload" src="img/images/recept-img-1.jpg" srcset="img/images/2x/recept-img-1-2x.jpg 2x" alt="Салат с рукколой">
+                        </picture>
+                    </div>
+                </figure>
+                <figure class="recept">
+                    <figcaption class="recept__desc">
+                        <h5 class="title-recept">Бутерброд с сыром</h5>
+                        <p class="recept__slogan">Приготовь себе и близким интересный перекус</p>
+                    </figcaption>
+                    <div class="recept__img">
+                        <picture>
+                            <source srcset="img/images/recept-img-2.webp 1x, img/images/2x/recept-img-2-2x.webp 2x" type="image/webp">
+                            <img class="lazyload" src="img/images/recept-img-2.jpg" srcset="img/images/2x/recept-img-2-2x.jpg 2x" alt="Бутерброд с сыром">
+                        </picture>
+                    </div>
+                </figure>
+                <figure class="recept">
+                    <figcaption class="recept__desc">
+                        <h5 class="title-recept">Бутерброд с сыром</h5>
+                        <p class="recept__slogan">Приготовь себе и близким интересный перекус</p>
+                    </figcaption>
+                    <div class="recept__img">
+                        <picture>
+                            <source srcset="img/images/recept-img-2.webp 1x, img/images/2x/recept-img-2-2x.webp 2x" type="image/webp">
+                            <img class="lazyload" src="img/images/recept-img-2.jpg" srcset="img/images/2x/recept-img-2-2x.jpg 2x" alt="Бутерброд с сыром">
+                        </picture>
+                    </div>
+                </figure>
+                <figure class="recept">
+                    <figcaption class="recept__desc">
+                        <h5 class="title-recept">Бутерброд с сыром</h5>
+                        <p class="recept__slogan">Приготовь себе и близким интересный перекус</p>
+                    </figcaption>
+                    <div class="recept__img">
+                        <picture>
+                            <source srcset="img/images/recept-img-2.webp 1x, img/images/2x/recept-img-2-2x.webp 2x" type="image/webp">
+                            <img class="lazyload" src="img/images/recept-img-2.jpg" srcset="img/images/2x/recept-img-2-2x.jpg 2x" alt="Бутерброд с сыром">
+                        </picture>
+                    </div>
+                </figure>
+                <figure class="recept">
+                    <figcaption class="recept__desc">
+                        <h5 class="title-recept">Салат с рукколой</h5>
+                        <p class="recept__slogan">Наслаждайся вкусным салатом каждый день</p>
+                    </figcaption>
+                    <div class="recept__img">
+                        <picture>
+                            <source srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" type="image/webp">
+                            <img class="lazyload" src="img/images/recept-img-1.jpg" srcset="img/images/2x/recept-img-1-2x.jpg 2x" alt="Салат с рукколой">
+                        </picture>
+                    </div>
+                </figure>
+                <figure class="recept">
+                    <figcaption class="recept__desc">
+                        <h5 class="title-recept">Салат с рукколой</h5>
+                        <p class="recept__slogan">Наслаждайся вкусным салатом каждый день</p>
+                    </figcaption>
+                    <div class="recept__img">
+                        <picture>
+                            <source srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" type="image/webp">
+                            <img class="lazyload" src="img/images/recept-img-1.jpg" srcset="img/images/2x/recept-img-1-2x.jpg 2x" alt="Салат с рукколой">
+                        </picture>
+                    </div>
+                </figure>
+                <figure class="recept">
+                    <figcaption class="recept__desc">
+                        <h5 class="title-recept">Салат с рукколой</h5>
+                        <p class="recept__slogan">Наслаждайся вкусным салатом каждый день</p>
+                    </figcaption>
+                    <div class="recept__img">
+                        <picture>
+                            <source srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" type="image/webp">
+                            <img class="lazyload" src="img/images/recept-img-1.jpg" srcset="img/images/2x/recept-img-1-2x.jpg 2x" alt="Салат с рукколой">
+                        </picture>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="ingridients">
+        <h3 class="title-section visually-hidden">Ингридиенты для рецептов</h3>
+        <div class="wrapper">
+            <div class="ingridients__content">
+                <ul class="ingridients__list-left">
+                    <li class="ingridients__item-left title-section">
+                        Фрукты
+                        <button class="btn-ingridients" id="fruits" aria-label="Больше информации" aria-controls="modal-fruits">
+                            <svg aria-hidden="true">
+                                <use xlink:href="img/svg/sprite.svg#dagger"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="ingridients__item-left title-section">
+                        Мясо
+                        <button class="btn-ingridients" id="meat" aria-label="Больше информации" aria-controls="modal-meat">
+                            <svg aria-hidden="true">
+                                <use xlink:href="img/svg/sprite.svg#dagger"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="ingridients__item-left title-section">
+                        Овощи
+                        <button class="btn-ingridients" id="vegetables" aria-label="Больше информации" aria-controls="modal-vegetables">
+                            <svg aria-hidden="true">
+                                <use xlink:href="img/svg/sprite.svg#dagger"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <picture>
+                    <source srcset="img/images/ingridients.webp 1x, img/images/2x/ingridients-2x.webp 2x" type="image/webp">
+                    <img class="lazyload" src="img/images/ingridients.png" srcset="img/images/2x/ingridients-2x.png 2x" alt=" Ингридиенты для рецептов">
+                </picture>
+                <ul class="ingridients__list-right">
+                    <li class="ingridients__item-right title-section">
+                        <button class="btn-ingridients" id="greenery" aria-label="Больше информации" aria-controls="modal-greenery">
+                            <svg aria-hidden="true">
+                                <use xlink:href="img/svg/sprite.svg#dagger"></use>
+                            </svg>
+                        </button>
+                        Трава
+                    </li>
+                    <li class="ingridients__item-right title-section">
+                        <button class="btn-ingridients" id="fish" aria-label="Больше информации" aria-controls="modal-fish">
+                            <svg aria-hidden="true">
+                                <use xlink:href="img/svg/sprite.svg#dagger"></use>
+                            </svg>
+                        </button>
+                        Рыба
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="avtor">
+        <div class="wrapper">
+            <figure class="avtor__content">
+                <div class="avtor__img"></div>
+                <figcaption class="avtor__desc">
+                    <h3 class="title-section">Об авторе</h3>
+                    <p class="avtor__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum cursus lorem a leo imperdiet, ac dignissim</p>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="recept-other">
+        <h3 class="title-section visually-hidden">Разные рцепты</h3>
+        <div class="wrapper">
+            <div class="recept-other__content">
+                <figure class="recept-other__item">
+                    <picture>
+                        <source srcset="img/images/recept-other-1.webp 1x, img/images/2x/recept-other-1-2x.webp 2x" type="image/webp">
+                        <img class="lazyload" src="img/images/recept-other-1.jpg" srcset="img/images/2x/recept-other-1-2x.jpg 2x" alt="Салат или бутербброд">
+                    </picture>
+                    <figcaption class="recept-other__desc">
+                        <p>Описание</p>
+                    </figcaption>
+                </figure>
+                <figure class="recept-other__item">
+                    <picture>
+                        <source srcset="img/images/recept-other-1.webp 1x, img/images/2x/recept-other-1-2x.webp 2x" type="image/webp">
+                        <img class="lazyload" src="img/images/recept-other-1.jpg" srcset="img/images/2x/recept-other-1-2x.jpg 2x" alt="Салат или бутербброд">
+                    </picture>
+                    <figcaption class="recept-other__desc">
+                        <p>Описание</p>
+                    </figcaption>
+                </figure>
+                <figure class="recept-other__item">
+                    <picture>
+                        <source srcset="img/images/recept-other-1.webp 1x, img/images/2x/recept-other-1-2x.webp 2x" type="image/webp">
+                        <img class="lazyload" src="img/images/recept-other-1.jpg" srcset="img/images/2x/recept-other-1-2x.jpg 2x" alt="Салат или бутербброд">
+                    </picture>
+                    <figcaption class="recept-other__desc">
+                        <p>Описание</p>
+                    </figcaption>
+                </figure>
+                <figure class="recept-other__item">
+                    <picture>
+                        <source srcset="img/images/recept-other-1.webp 1x, img/images/2x/recept-other-1-2x.webp 2x" type="image/webp">
+                        <img class="lazyload" src="img/images/recept-other-1.jpg" srcset="img/images/2x/recept-other-1-2x.jpg 2x" alt="Салат или бутербброд">
+                    </picture>
+                    <figcaption class="recept-other__desc">
+                        <p>Описание</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Modal -->
+<div class="modal" id="modal-fruits" role="dialog" aria-labelledby="modal__title" aria-modal="true">
+    <div class="modal__dialog">
+        <button type="button" class="btn-close modal__btn-close" tabindex="0" data-close-modal aria-label="Закрыть окно">
+            <span></span>
+        </button>
+        <div class="modal__content">
+            <h3 class="modal__title-modal" id="modal-title-fruits">
+                Фруктовые ингридиенты
+            </h3>
+            <div class="modal__body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsam dolore, hic optio doloremque quisquam veniam! Porro ipsa non illum earum magni delectus? Totam itaque amet possimus eaque, obcaecati autem.
+                    Animi nam inventore qui? Impedit ad atque facilis ipsam alias molestiae totam quas sit adipisci omnis temporibus, sapiente animi porro facere voluptates cumque esse eaque in veniam voluptas velit? Quibusdam.
+                    Quibusdam assumenda eos rem, natus suscipit temporibus in quas a odit maiores repellendus dignissimos saepe velit ipsum! Est, cupiditate. Modi consequatur aliquid beatae eveniet vel maxime vitae quaerat ullam ad?
+                </p>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" tabindex="0" data-close-modal>Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal-meat" role="dialog" aria-labelledby="modal__title" aria-modal="true">
+    <div class="modal__dialog">
+        <button type="button" class="btn-close modal__btn-close" tabindex="0" data-close-modal aria-label="Закрыть окно">
+            <span></span>
+        </button>
+        <div class="modal__content">
+            <h3 class="modal__title-modal" id="modal-title-meat">
+                Мясные ингридиенты
+            </h3>
+            <div class="modal__body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsam dolore, hic optio doloremque quisquam veniam! Porro ipsa non illum earum magni delectus? Totam itaque amet possimus eaque, obcaecati autem.
+                    Animi nam inventore qui? Impedit ad atque facilis ipsam alias molestiae totam quas sit adipisci omnis temporibus, sapiente animi porro facere voluptates cumque esse eaque in veniam voluptas velit? Quibusdam.
+                    Quibusdam assumenda eos rem, natus suscipit temporibus in quas a odit maiores repellendus dignissimos saepe velit ipsum! Est, cupiditate. Modi consequatur aliquid beatae eveniet vel maxime vitae quaerat ullam ad?
+                </p>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" tabindex="0" data-close-modal>Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal-vegetables" role="dialog" aria-labelledby="modal__title" aria-modal="true">
+    <div class="modal__dialog">
+        <button type="button" class="btn-close modal__btn-close" tabindex="0" data-close-modal aria-label="Закрыть окно">
+            <span></span>
+        </button>
+        <div class="modal__content">
+            <h3 class="modal__title-modal" id="modal-title-vegetables">
+                Овощные ингридиенты
+            </h3>
+            <div class="modal__body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsam dolore, hic optio doloremque quisquam veniam! Porro ipsa non illum earum magni delectus? Totam itaque amet possimus eaque, obcaecati autem.
+                    Animi nam inventore qui? Impedit ad atque facilis ipsam alias molestiae totam quas sit adipisci omnis temporibus, sapiente animi porro facere voluptates cumque esse eaque in veniam voluptas velit? Quibusdam.
+                    Quibusdam assumenda eos rem, natus suscipit temporibus in quas a odit maiores repellendus dignissimos saepe velit ipsum! Est, cupiditate. Modi consequatur aliquid beatae eveniet vel maxime vitae quaerat ullam ad?
+                </p>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" tabindex="0" data-close-modal>Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal-greenery" role="dialog" aria-labelledby="modal__title" aria-modal="true">
+    <div class="modal__dialog">
+        <button type="button" class="btn-close modal__btn-close" tabindex="0" data-close-modal aria-label="Закрыть окно">
+            <span></span>
+        </button>
+        <div class="modal__content">
+            <h3 class="modal__title-modal" id="modal-title-greenery">
+                Зелень
+            </h3>
+            <div class="modal__body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsam dolore, hic optio doloremque quisquam veniam! Porro ipsa non illum earum magni delectus? Totam itaque amet possimus eaque, obcaecati autem.
+                    Animi nam inventore qui? Impedit ad atque facilis ipsam alias molestiae totam quas sit adipisci omnis temporibus, sapiente animi porro facere voluptates cumque esse eaque in veniam voluptas velit? Quibusdam.
+                    Quibusdam assumenda eos rem, natus suscipit temporibus in quas a odit maiores repellendus dignissimos saepe velit ipsum! Est, cupiditate. Modi consequatur aliquid beatae eveniet vel maxime vitae quaerat ullam ad?
+                </p>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" tabindex="0" data-close-modal>Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal-fish" role="dialog" aria-labelledby="modal__title" aria-modal="true">
+    <div class="modal__dialog">
+        <button type="button" class="btn-close modal__btn-close" tabindex="0" data-close-modal aria-label="Закрыть окно">
+            <span></span>
+        </button>
+        <div class="modal__content">
+            <h3 class="modal__title-modal" id="modal-title-fish">
+                Рыбные составляющие
+            </h3>
+            <div class="modal__body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsam dolore, hic optio doloremque quisquam veniam! Porro ipsa non illum earum magni delectus? Totam itaque amet possimus eaque, obcaecati autem.
+                    Animi nam inventore qui? Impedit ad atque facilis ipsam alias molestiae totam quas sit adipisci omnis temporibus, sapiente animi porro facere voluptates cumque esse eaque in veniam voluptas velit? Quibusdam.
+                    Quibusdam assumenda eos rem, natus suscipit temporibus in quas a odit maiores repellendus dignissimos saepe velit ipsum! Est, cupiditate. Modi consequatur aliquid beatae eveniet vel maxime vitae quaerat ullam ad?
+                </p>
+            </div>
+            <div class="modal__footer">
+                <button class="btn" tabindex="0" data-close-modal>Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  -->
+
+<footer class="footer">
+    <div class="footer__topline">
+        <div class="wrapper">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <a href="index.html" class="logo logo--footer">Салатик</a>
+                    <p class="footer__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis in</p>
+                </div>
+
+                <div class="footer__form">
+                    <form class="form-footer" aria-describedby="form-footer__desc">
+                        <p class="form-footer__desc" id="form-footer__desc">Подписывайтесь на обновления и получайте новые рецепты каждый день!</p>
+
+                        <!-- Hidden Required Fields -->
+                        <input type="hidden" name="project_name" value="http://f0315577.xsph.ru/salatik">
+                        <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                        <input type="hidden" name="form_subject" value="Сайт SALATIK. Подписка из футера">
+                        <!-- END Hidden Required Fields -->
+
+                        <label class="email">
+                            <span class="visually-hidden">Введите email(обязательное поле)</span>
+                            <input class="email__input" type="email" name="email" placeholder="Введите ваш email" required="required">
+                        </label>
+
+                        <button class="btn-submit form-footer__btn-submit">Подписаться</button>
+
+                        <label class="checkbox-footer">
+                            <input class="checkbox-footer__input" type="checkbox" name="Обработка данных" aria-checked="false">
+                            <span class="checkbox-footer__fake"></span>
+                            Согласие на обработку персональных данных
+                        </label>
+                    </form>
+                </div>
+
+                <div class="footer__socials">
+                    <nav class="nav-footer">
+                        <ul class="nav-footer__list">
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Главная</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Рецепты</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">О блоге</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Реклама</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="socials">
+                        <h5 class="socials__title">Мы в социальных сетях</h5>
+                        <ul class="socials__list">
+                            <li class="socials__item" style="background: #4680C2">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background: #3B5998">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#fb"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background: linear-gradient(49.12deg, #FFDD55 6.62%, #FF543E 32.09%, #D62976 53.83%, #C837AB 71.22%, #4F5BD5 90.92%)">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#inst"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background: #DC4E41">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#google+"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background:#4CAF50">
+                                <a href="#" class="socials__link socials__link--ws" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#whatsap"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background: #7F40BD">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#viber"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background: #30B0E1">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background:#ED812B">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#odno"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copy">
+        <div class="wrapper">
+            <div class="footer-copy__content">
+                <p class="footer-copy__info">2019 SALATIK - All Rights Reserved</p>
+                <div class="footer-copy__metrics">
+                    <div class="footer-copy__count"><a href="#">Счетчик</a></div>
+                    <div class="footer-copy__count"><a href="#">Счетчик</a></div>
+                    <div class="footer-copy__count"><a href="#">Счетчик</a></div>
+                    <div class="footer-copy__count"><a href="#">Счетчик</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn-up" aria-label="Наверх">
+        <svg aria-hidden="true">
+            <use xlink:href="img/svg/sprite.svg#up"></use>
+        </svg>
+    </button>
+</footer>
+
+<script src="./js/script.js"></script>
+
+</body>
+
+</html>

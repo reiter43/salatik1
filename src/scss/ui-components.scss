@@ -1,0 +1,222 @@
+/*---------------------------------------------
+    Кнопки
+---------------------------------------------*/
+.btn {
+    min-width: 86px;
+    padding: 6px 27px 8px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    background: $cf-green;
+    font-family: $font-family-roboto;
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 400;
+    color: $ct-white;
+    transition: opacity ease 0.5s;
+    cursor: pointer;
+    appearance: none;
+
+    &:hover {
+        opacity: 0.85;
+    }
+}
+
+.btn-icon {
+    min-width: 86px;
+    padding: 20px 28px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-family: $font-family-roboto;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: $ct-black;
+    transition: opacity ease 0.5s;
+    cursor: pointer;
+    appearance: none;
+
+    svg {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.btn-submit {
+    min-width: 200px;
+    padding: 12px 58px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background: $cf-green;
+    font-family: $font-family-roboto;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 500;
+    color: $ct-light-gray;
+    text-transform: uppercase;
+    transition: opacity ease 0.5s;
+    cursor: pointer;
+    appearance: none;
+
+    &:hover {
+        opacity: 0.85;
+    }
+
+    &--suscribe {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    &--suscribe-footer {
+        width: 100%;
+        background: $cf-dark-green;
+        font-size: 18px;
+    }
+}
+
+.btn-add-recept {
+    min-width: 180px;
+    padding: 6px 36px 7px;
+    text-align: center;
+    border: 1px solid $cf-green;
+    border-radius: 20px;
+    background: $cf-gray2;
+    font-family: $font-family-roboto;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: $ct-green;
+    transition: opacity ease 0.5s;
+    cursor: pointer;
+    appearance: none;
+
+    &:hover {
+        opacity: 0.85;
+    }
+}
+
+.btn-ingridients {
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    appearance: none;
+}
+
+.btn-close {
+    border: none;
+    background: none;
+
+    span {
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        &:hover {
+
+            &::before,
+            &::after {
+                background: darken(#777777, 40%);
+            }
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            display: block;
+            width: 20px;
+            height: 3px;
+            background: #777777;
+            transition: background-color 0.5s ease;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+/*------------------------------------------------*/
+
+/*---------------------------------------------
+    Заголовки
+---------------------------------------------*/
+.title-section {
+    margin: 0;
+    text-align: center;
+    font-family: $font-family-days;
+    font-size: 32px;
+    line-height: 41px;
+    color: $ct-black;
+}
+
+.title-section-inner {
+    margin: 0;
+    font-family: $font-family-roboto;
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 500;
+    color: $ct-black;
+}
+
+.title-recept {
+    margin: 0;
+    font-family: $font-family-days;
+    font-size: 20px;
+    line-height: 25px;
+    color: $ct-black;
+}
+
+.title-sub {
+    margin: 0;
+    font-family: $font-family-roboto;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 500;
+    color: $ct-black;
+}
+
+/*------------------------------------------------*/
+
+/*---------------------------------------------
+   Карточка рецепта
+---------------------------------------------*/
+.recept {
+    @include col();
+    @include size(4);
+
+    display: flex;
+    margin-bottom: 60px;
+    border-radius: 5px;
+    background: $cf-gray3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    &__desc {
+        padding: 24px 16px;
+
+        p {
+            margin-top: 16px;
+            font-family: $font-family-roboto;
+            font-size: 16px;
+            line-height: 132.19%;
+            color: $ct-semi-black;
+        }
+    }
+
+    &__img {
+        img {
+            display: block;
+        }
+    }
+}

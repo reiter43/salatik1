@@ -1,0 +1,348 @@
+/*=============================================
+        ОСНОВНОЙ КОНТЕНТ
+=============================================*/
+
+/*---------------------------------------------
+  Секция slider
+---------------------------------------------*/
+.slider {
+    position: relative;
+
+    &__item {
+        min-height: 452px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.title-site {
+    margin: 0;
+    padding: 102px 0 0 162px;
+    font-family: $font-family-days;
+    font-size: 80px;
+    line-height: 102px;
+    color: $ct-light-gray;
+    letter-spacing: 0.08em;
+
+    span {
+        display: block;
+        font-family: $font-family-days;
+        font-size: 48px;
+        line-height: 1;
+        color: $ct-light-gray;
+        letter-spacing: 0;
+    }
+}
+
+.container-controls {
+    position: absolute;
+    z-index: 11;
+    top: 49%;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1358px;
+    margin: 0 auto;
+    padding: 0 20px;
+    transform: translateX(-50%);
+}
+
+.owl-carousel .owl-stage {
+    display: flex;
+    align-items: stretch;
+}
+
+.btn-control {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: $ct-semi-black;
+    transition: background 0.3s ease-in;
+    cursor: pointer;
+
+    svg {
+        @include svg(10px, 20px, $ct-semi-black);
+        stroke: $cf-white;
+        stroke-width: 3px;
+    }
+
+    &:hover {
+        background: $ct-gray-lines;
+
+        svg {
+            fill: $ct-gray-lines;
+        }
+    }
+}
+
+
+.owl-carousel {
+    .owl-dots {
+        position: absolute;
+        z-index: 10;
+        left: 50%;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+        transform: translateX(-50%);
+
+        .owl-dot {
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            background: $ct-semi-black;
+            transition: all ease 0.5s;
+
+            &.active {
+                background: $ct-black;
+            }
+        }
+
+        .owl-dot:not(:first-child) {
+            margin-left: 24px;
+        }
+    }
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция review
+---------------------------------------------*/
+.review {
+    position: relative;
+    z-index: -10;
+    background: $cf-white;
+
+    &__title-section {
+        padding: 52px 0 48px;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 25%;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 189px;
+        height: 189px;
+        margin: 0 auto;
+        border: 1px solid $ct-gray-lines;
+        border-radius: 50%;
+        background: $cf-white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+        svg {
+            @include svg(117px, 103px, $ct-green);
+        }
+    }
+
+    &__desc {
+        margin-top: 32px;
+        text-align: center;
+        font-family: $font-family-roboto;
+        font-size: 24px;
+        line-height: 28px;
+        color: $ct-black;
+    }
+
+    &__down {
+        position: absolute;
+        z-index: -1;
+        top: 57%;
+        left: 0;
+        width: 100%;
+        min-height: 216px;
+        border-top: 1px solid $ct-gray-lines;
+        border-bottom: 1px solid $ct-gray-lines;
+        background: $cf-light-gray;
+    }
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция recept-review
+---------------------------------------------*/
+.recept-review {
+    margin-top: 35px;
+    padding-top: 100px;
+    background: $cf-white;
+
+    &__content {
+        @include row-flex();
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция ingridients
+---------------------------------------------*/
+.ingridients {
+    padding-top: 100px;
+    background: $cf-white;
+
+    &__content {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list-left,
+    &__list-right {
+        list-style-type: none;
+    }
+
+    &__list-left {
+        padding: 40px 107px 0 0;
+    }
+
+    &__list-right {
+        padding: 120px 0 0 130px;
+    }
+
+    &__item-left,
+    &__item-right {
+        position: relative;
+        margin-bottom: 125px;
+        vertical-align: middle;
+        color: $ct-semi-black;
+
+        svg {
+            @include svg(20px, 20px, transparent);
+            display: inline-block;
+            vertical-align: middle;
+            stroke: $ct-black;
+            stroke-width: 4px;
+        }
+    }
+
+    &__item-left {
+        text-align: left;
+
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 10;
+            left: 0;
+            bottom: -20px;
+            width: 340px;
+            height: 3px;
+            background: $cf-green;
+        }
+    }
+
+    &__item-right {
+        text-align: right;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 10;
+            right: 0;
+            bottom: -20px;
+            width: 400px;
+            height: 3px;
+            background: $cf-green;
+        }
+    }
+
+    img {
+        background: $cf-light-gray;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
+    }
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция  avtor
+---------------------------------------------*/
+.avtor {
+    padding: 160px 0 120px;
+    background: $cf-white;
+
+    &__content {
+        display: flex;
+    }
+
+    &__img {
+        width: 265px;
+        height: 350px;
+        border: 1px solid $ct-gray-lines;
+        border-radius: 5px;
+    }
+
+    &__desc {
+        max-width: 755px;
+        margin-left: 100px;
+    }
+
+    &__info {
+        margin-top: 42px;
+        font-family: $font-family-roboto;
+        font-size: 20px;
+        line-height: 132.19%;
+        color: $ct-semi-black;
+    }
+}
+
+/*----------------------------------------------*/
+
+/*---------------------------------------------
+  Секция  recept-other
+---------------------------------------------*/
+.recept-other {
+    padding: 80px 0;
+    border-top: 1px solid $ct-gray-lines;
+    border-bottom: 1px solid $ct-gray-lines;
+    background: $cf-light-gray;
+
+    &__content {
+        @include row-flex();
+        justify-content: space-between;
+    }
+
+    &__item {
+        @include col();
+        @include size(2.85);
+
+        border: 1px solid $ct-gray-lines;
+        border-radius: 5px;
+
+        img {
+            @include img;
+        }
+    }
+
+    &__desc {
+        padding: 12px;
+        background: $cf-white;
+
+        p {
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: $font-family-roboto;
+            font-size: 16px;
+            line-height: 132.19%;
+            color: $ct-semi-black;
+        }
+    }
+}
+
+/*=============================================*/
