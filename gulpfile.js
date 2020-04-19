@@ -44,16 +44,21 @@ let settings = {
 		fields: "100px"
 	},
 	breakPoints: {
+		llg: {
+			width: "1320px",
+			fields: "60px"
+		},
 		lg: {
 			width: "1200px",
-			fields: "60px"
+			fields: "40px"
 		},
 		md: {
 			width: "996px",
-			fields: "40px"
+			offset: "25px",
+			fields: "24px"
 		},
 		sm: {
-			width: "768px",
+			width: "767px",
 			fields: "24px"
 		},
 		s: {

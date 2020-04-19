@@ -4,7 +4,6 @@ const modalWindow = (btnsOpen, windowModal) => {
     const modalDialog = modal.firstElementChild;
     const btnsClose = document.querySelectorAll('[data-close-modal]');
     const focusableElements = modal.querySelectorAll('[tabindex="0"]');
-    const scroll = calcScroll();
     let lastFocus;
 
     btnsOpenWindow.forEach((el) => { el.addEventListener('click', showModal); });
@@ -20,14 +19,15 @@ const modalWindow = (btnsOpen, windowModal) => {
         modalDialog.classList.remove('close');
         modalDialog.classList.add('open');
         document.body.style.overflow = 'hidden';
-        document.body.style.marginRight = `${scroll}px`;
+        document.body.style.marginRight = `${calcScroll()}px`;
         focusableElements[1].focus();
 
         modal.addEventListener('keydown', (e) => {
             if (e.keyCode === 9) {
                 if (e.shiftKey) {
                     if (document.activeElement === focusableElements[0]) { focusableElements[focusableElements.length - 1].focus(); }
-                } else if (document.activeElement === focusableElements[focusableElements.length - 1]) { focusableElements[0].focus(); }
+                }
+                else if (document.activeElement === focusableElements[focusableElements.length - 1]) { focusableElements[0].focus(); }
             }
 
             if (e.keyCode === 27) { closeModal(); }

@@ -1,13 +1,13 @@
 .modal {
     position: fixed;
+    z-index: 15;
     top: 0;
     left: 0;
-    z-index: 15;
     width: 100%;
     height: 100%;
+    visibility: hidden;
     overflow: hidden;
     background-color: rgba(0, 0, 0, .7);
-    visibility: hidden;
 
     &.visial {
         visibility: visible;
@@ -16,7 +16,7 @@
     &__dialog {
         position: relative;
         max-width: 500px;
-        margin: 40px auto;        
+        margin: 40px auto;
 
         &.open {
             animation-name: animatetop;
@@ -35,13 +35,13 @@
     }
 
     &__content {
-        padding: 15px;
         width: 100%;
-        background-color: #fff;
+        max-height: 80vh;
+        padding: 15px;
+        overflow-y: auto;
         border: 1px solid rgba(0, 0, 0, .2);
         border-radius: 4px;
-        max-height: 80vh;
-        overflow-y: auto;
+        background-color: #fff;
     }
 
     &__body {

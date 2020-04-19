@@ -97,6 +97,69 @@
 }
 
 //Кнопка-гамбургер для меню
+@mixin burger ($widthButton, $heightButton, $widthLine, $heightLine, $gat, $colorLine, $colorButton, $widthBorderButton, $colorBorderButton) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: $widthButton;
+    height: $heightButton;
+    padding: 0;
+    border: $widthBorderButton solid $colorBorderButton;
+    border-radius: 4px;
+    background: $colorButton;
+    cursor: pointer;
+
+    &__icon {
+        position: relative;
+        display: block;
+        width: $widthLine;
+        height: $heightLine;
+        border-radius: 2px;
+        background-color: $colorLine;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -$gat;
+            left: 0;
+            width: $widthLine;
+            height: $heightLine;
+            border-radius: 2px;
+            background-color: $colorLine;
+            transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: $gat;
+            left: 0;
+            width: $widthLine;
+            height: $heightLine;
+            border-radius: 2px;
+            background-color: $colorLine;
+            transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+        }
+
+        &.burger__icon--active {
+            background-color: transparent;
+        }
+
+        &.burger__icon--active::before {
+            top: 0;
+            transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+            transform: rotate(45deg);
+        }
+
+        &.burger__icon--active::after {
+            top: 0;
+            transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
 @mixin gamburger ($widthButton, $heightButton, $widthLine, $heightLine, $gat, $colorLine, $colorButton) {
     z-index: 100;
     display: flex;
@@ -174,6 +237,18 @@
     font-size: 16px;
     line-height: 100%;
     color: $ct-dark-gray;
+
+    @include lg-block {
+        font-size: 14px;
+    }
+
+    @include md-block {
+        font-size: 10px;
+    }
+
+    @include sm-block {
+        font-size: 12px;
+    }
 }
 
 //Адаптивность картинки
@@ -188,6 +263,16 @@
     width: $width;
     height: $height;
     fill: $fill;
+}
+
+// Видимость элемента
+@mixin visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
 }
 
 //---------------------------------------------

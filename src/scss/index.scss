@@ -13,25 +13,61 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+
+        @include lg-block {
+            min-height: 312px;
+        }
+
+        @include xs-block {
+            min-height: 207px;
+        }
     }
 }
 
 .title-site {
     margin: 0;
-    padding: 102px 0 0 162px;
+    padding: 102px 0 0 62px;
     font-family: $font-family-days;
     font-size: 80px;
     line-height: 102px;
+    font-weight: 400;
     color: $ct-light-gray;
     letter-spacing: 0.08em;
+
+    @include lg-block {
+        padding-top: 40px;
+        font-size: 42px;
+        line-height: 180%;
+    }
+
+    @include xs-block {
+        padding-top: 16px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    @include xxs-block {
+        padding-left: 27px;
+        letter-spacing: 0.05em;
+    }
 
     span {
         display: block;
         font-family: $font-family-days;
         font-size: 48px;
         line-height: 1;
+        font-weight: 400;
         color: $ct-light-gray;
         letter-spacing: 0;
+
+        @include lg-block {
+            font-size: 25px;
+            line-height: 100%;
+        }
+
+        @include xs-block {
+            font-size: 14px;
+        }
     }
 }
 
@@ -47,6 +83,10 @@
     margin: 0 auto;
     padding: 0 20px;
     transform: translateX(-50%);
+
+    @include xs-block {
+        top: 42%;
+    }
 }
 
 .owl-carousel .owl-stage {
@@ -64,10 +104,21 @@
     transition: background 0.3s ease-in;
     cursor: pointer;
 
+    @include s-block {
+        width: 28px;
+        height: 28px;
+    }
+
     svg {
         @include svg(10px, 20px, $ct-semi-black);
         stroke: $cf-white;
         stroke-width: 3px;
+        display: inline-block;
+        vertical-align: middle;
+
+        @include s-block {
+            @include svg(8px, 17px, $ct-semi-black);
+        }
     }
 
     &:hover {
@@ -121,6 +172,14 @@
 
     &__title-section {
         padding: 52px 0 48px;
+
+        @include md-block {
+            padding: 30px 0 32px;
+        }
+
+        @include xxs-block {
+            padding: 30px 0 40px;
+        }
     }
 
     &__content {
@@ -131,6 +190,11 @@
 
     &__item {
         width: 25%;
+
+        @include s-block {
+            width: 50%;
+            margin-bottom: 32px;
+        }
     }
 
     &__img {
@@ -145,8 +209,35 @@
         background: $cf-white;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
+        @include lg-block {
+            width: 150px;
+            height: 150px;
+        }
+
+        @include md-block {
+            width: 100px;
+            height: 100px;
+        }
+
+        @include xxs-block {
+            width: 80px;
+            height: 80px;
+        }
+
         svg {
             @include svg(117px, 103px, $ct-green);
+
+            @include lg-block {
+                @include svg(85px, 80px, $ct-green);
+            }
+
+            @include md-block {
+                @include svg(62px, 54px, $ct-green);
+            }
+
+            @include xxs-block {
+                @include svg(50px, 44px, $ct-green);
+            }
         }
     }
 
@@ -157,6 +248,23 @@
         font-size: 24px;
         line-height: 28px;
         color: $ct-black;
+
+        @include lg-block {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        @include md-block {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        @include s-block {
+            margin-top: 16px;
+            padding: 0 5px;
+            font-size: 12px;
+            line-height: 125.19%;
+        }
     }
 
     &__down {
@@ -169,6 +277,20 @@
         border-top: 1px solid $ct-gray-lines;
         border-bottom: 1px solid $ct-gray-lines;
         background: $cf-light-gray;
+
+        @include s-block {
+            top: 32%;
+            min-height: 350px;
+        }
+
+        @include xs-block {
+            top: 30%;
+            min-height: 310px;
+        }
+
+        @include xxs-block {
+            top: 32%;
+        }
     }
 }
 
@@ -182,10 +304,31 @@
     padding-top: 100px;
     background: $cf-white;
 
+    @include lg-block {
+        padding-top: 80px;
+    }
+
+    @include md-block {
+        margin-top: 24px;
+        padding-top: 56px;
+    }
+
+    @include s-block {
+        padding-top: 40px;
+    }
+
+    @include xs-block {
+        margin-top: 0;
+    }
+
     &__content {
         @include row-flex();
         justify-content: space-between;
-        margin-top: 100px;
+        margin-top: 0;
+
+        @include sm-block {
+            justify-content: center;
+        }
     }
 }
 
@@ -198,9 +341,39 @@
     padding-top: 100px;
     background: $cf-white;
 
+    @include lg-block {
+        padding-top: 80px;
+    }
+
+    @include md-block {
+        padding-top: 40px;
+    }
+    @include sm-block {
+        padding-bottom: 32px;
+    }
+    @include xs-block {
+        padding-top: 5px;
+    }
+
     &__content {
         display: flex;
         justify-content: center;
+
+        @include llg-block {
+            justify-content: space-between;
+        }
+
+        @include sm-block {
+            display: none;
+        }
+    }
+
+    &__content--mob {
+        display: none;
+
+        @include sm-block {
+            display: block;
+        }
     }
 
     &__list-left,
@@ -210,10 +383,26 @@
 
     &__list-left {
         padding: 40px 107px 0 0;
+
+        @include llg-block {
+            padding-right: 0;
+        }
+
+        @include md-block {
+            padding-top: 30px;
+        }
     }
 
     &__list-right {
         padding: 120px 0 0 130px;
+
+        @include llg-block {
+            padding-left: 0;
+        }
+
+        @include md-block {
+            padding-top: 60px;
+        }
     }
 
     &__item-left,
@@ -222,6 +411,10 @@
         margin-bottom: 125px;
         vertical-align: middle;
         color: $ct-semi-black;
+
+        @include md-block {
+            margin-bottom: 88px;
+        }
 
         svg {
             @include svg(20px, 20px, transparent);
@@ -244,6 +437,18 @@
             width: 340px;
             height: 3px;
             background: $cf-green;
+
+            @include llg-block {
+                width: 370px;
+            }
+
+            @include lg-block {
+                width: 290px;
+            }
+
+            @include md-block {
+                width: 310px;
+            }
         }
     }
 
@@ -259,6 +464,14 @@
             width: 400px;
             height: 3px;
             background: $cf-green;
+
+            @include lg-block {
+                width: 350px;
+            }
+
+            @include md-block {
+                width: 310px;
+            }
         }
     }
 
@@ -268,17 +481,106 @@
     }
 }
 
+
+.accordion {
+    &__head {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        padding: 16px 20px;
+        text-align: center;
+        border: 1px solid $ct-gray-lines;
+        border-radius: 4px;
+        background: $ct-light-gray;
+        font-size: 18px;
+        color: $ct-black;
+        cursor: pointer;
+
+        @include s-block {
+            width: 100%;
+        }
+
+        @include xs-block {
+            font-size: 14px;
+        }
+
+        svg {
+            @include svg(20px, 20px, transparent);
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+            stroke: $ct-black;
+            stroke-width: 4px;
+        }
+    }
+
+    &__content {
+        width: 80%;
+        max-height: 0;
+        margin: 0 auto 24px;
+        overflow: hidden;
+        border: 1px solid $ct-gray-lines;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        background-color: transparent;
+        opacity: 0;
+        transition: opacity 0.5s, max-height 0.6s, padding 0.1s;
+
+        @include s-block {
+            width: 100%;
+        }
+
+        &.active {
+            overflow: visible;
+            opacity: 1;
+        }
+    }
+
+    &__text {
+        padding: 16px;
+        font-family: $font-family-roboto;
+        font-size: 14px;
+        line-height: 132.19%;
+        color: $ct-semi-black;
+
+        @include xs-block {
+            font-size: 12px;
+        }
+    }
+}
+
 /*----------------------------------------------*/
 
 /*---------------------------------------------
   Секция  avtor
 ---------------------------------------------*/
 .avtor {
+    position: relative;
     padding: 160px 0 120px;
     background: $cf-white;
 
+    @include lg-block {
+        padding: 130px 0 110px;
+    }
+
+    @include md-block {
+        padding: 100px 0 100px;
+    }
+    @include sm-block {
+        padding: 68px 0 100px;
+    }
+
+    @include s-block {
+        padding: 55px 0 40px;
+    }
+
     &__content {
         display: flex;
+
+        @include s-block {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__img {
@@ -286,19 +588,79 @@
         height: 350px;
         border: 1px solid $ct-gray-lines;
         border-radius: 5px;
+
+        @include md-block {
+            min-width: 204px;
+            height: 270px;
+        }
+
+        @include lg-block {
+            min-width: 240px;
+            height: 300px;
+        }
+
+        @include xxs-block {
+            width: 232px;
+            height: 296px;
+        }
     }
 
     &__desc {
         max-width: 755px;
         margin-left: 100px;
+
+        @include lg-block {
+            margin-left: 75px;
+        }
+
+        @include md-block {
+            margin-left: 50px;
+        }
+
+        @include sm-block {
+            margin-left: 30px;
+        }
+
+        @include s-block {
+            margin-left: 0;
+        }
+    }
+
+    &__title-section {
+        @include s-block {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     &__info {
         margin-top: 42px;
+        padding-right: 20px;
         font-family: $font-family-roboto;
         font-size: 20px;
         line-height: 132.19%;
         color: $ct-semi-black;
+
+        @include lg-block {
+            font-size: 18px;
+        }
+
+        @include md-block {
+            font-size: 14px;
+        }
+
+        @include s-block {
+            margin-top: 32px;
+            padding-right: 10px;
+            padding-left: 10px;
+            text-align: center;
+        }
+
+        @include xxs-block {
+            font-size: 12px;
+        }
     }
 }
 
@@ -313,17 +675,47 @@
     border-bottom: 1px solid $ct-gray-lines;
     background: $cf-light-gray;
 
+    @include lg-block {
+        padding: 60px 0;
+    }
+
+    @include md-block {
+        padding: 48px 0;
+    }
+
+    @include s-block {
+        padding: 40px 0 5px;
+    }
+
     &__content {
         @include row-flex();
         justify-content: space-between;
+
+        @include s-block {
+            justify-content: center;
+        }
     }
 
     &__item {
         @include col();
         @include size(2.85);
+        @include size-lg(3);
+        @include size-md(3);
+        @include size-s(6);
+        @include size-s(6);
+        @include size-xs(12);
 
         border: 1px solid $ct-gray-lines;
         border-radius: 5px;
+
+        @include s-block {
+            max-width: 200px;
+            margin-bottom: 35px;
+        }
+
+        @include xs-block {
+            max-width: 300px;
+        }
 
         img {
             @include img;
@@ -334,6 +726,10 @@
         padding: 12px;
         background: $cf-white;
 
+        @include md-block {
+            padding: 10px;
+        }
+
         p {
             margin-bottom: 20px;
             text-align: center;
@@ -341,6 +737,11 @@
             font-size: 16px;
             line-height: 132.19%;
             color: $ct-semi-black;
+
+            @include md-block {
+                margin-bottom: 16px;
+                font-size: 12px;
+            }
         }
     }
 }

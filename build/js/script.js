@@ -16463,7 +16463,6 @@ var modalWindow = function modalWindow(btnsOpen, windowModal) {
   var modalDialog = modal.firstElementChild;
   var btnsClose = document.querySelectorAll('[data-close-modal]');
   var focusableElements = modal.querySelectorAll('[tabindex="0"]');
-  var scroll = calcScroll();
   var lastFocus;
   btnsOpenWindow.forEach(function (el) {
     el.addEventListener('click', showModal);
@@ -16483,7 +16482,7 @@ var modalWindow = function modalWindow(btnsOpen, windowModal) {
     modalDialog.classList.remove('close');
     modalDialog.classList.add('open');
     document.body.style.overflow = 'hidden';
-    document.body.style.marginRight = "".concat(scroll, "px");
+    document.body.style.marginRight = "".concat(calcScroll(), "px");
     focusableElements[1].focus();
     modal.addEventListener('keydown', function (e) {
       if (e.keyCode === 9) {

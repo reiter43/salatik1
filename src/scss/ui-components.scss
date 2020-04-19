@@ -2,7 +2,6 @@
     Кнопки
 ---------------------------------------------*/
 .btn {
-    min-width: 86px;
     padding: 6px 27px 8px;
     text-align: center;
     border: none;
@@ -17,8 +16,34 @@
     cursor: pointer;
     appearance: none;
 
+    @include md-block {
+        padding: 6px 20px;
+        font-size: 12px;
+    }
+
+    @include sm-block {
+        padding: 0;
+        background: transparent;
+    }
+
     &:hover {
         opacity: 0.85;
+    }
+
+    span {
+        @include sm-block {
+            @include visually-hidden;
+        }
+    }
+
+    svg {
+        @include svg (24px, 24px, $ct-semi-black);
+        display: none;
+        vertical-align: middle;
+
+        @include sm-block {
+            display: inline-block;
+        }
     }
 }
 
@@ -38,6 +63,19 @@
     appearance: none;
 
     svg {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.btn-search {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    svg {
+        @include svg (22px, 22px, $ct-semi-black);
         display: inline-block;
         vertical-align: middle;
     }
@@ -73,6 +111,16 @@
         width: 100%;
         background: $cf-dark-green;
         font-size: 18px;
+
+        @include md-block {
+            padding: 7px 58px;
+            font-size: 10px;
+        }
+
+        @include sm-block {
+            padding-top: 8px;
+            font-size: 12px;
+        }
     }
 }
 
@@ -159,6 +207,16 @@
     font-size: 32px;
     line-height: 41px;
     color: $ct-black;
+
+    @include md-block {
+        font-size: 22px;
+        line-height: 100%;
+    }
+
+    @include xxs-block {
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
 
 .title-section-inner {
@@ -176,6 +234,22 @@
     font-size: 20px;
     line-height: 25px;
     color: $ct-black;
+
+    @include lg-block {
+        font-size: 16px;
+    }
+
+    @include md-block {
+        font-size: 12px;
+        line-height: 100%;
+    }
+
+    @include s-block {
+        font-size: 16px;
+    }
+    @include xs-block {
+        font-size: 13px;
+    }
 }
 
 .title-sub {
@@ -195,6 +269,9 @@
 .recept {
     @include col();
     @include size(4);
+    @include size-md(4);
+    @include size-sm(6);
+    @include size-s(12);
 
     display: flex;
     margin-bottom: 60px;
@@ -202,8 +279,27 @@
     background: $cf-gray3;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
+    @include sm-block {
+        max-width: 285px;
+        margin-bottom: 32px;
+    }
+    @include s-block {
+        max-width: 340px;
+    }
+
+    &--s {
+        @include s-block {
+            display: none;
+        }
+    }
+
     &__desc {
         padding: 24px 16px;
+
+        @include lg-block {
+            min-width: 136px;
+            padding: 12px 9px;
+        }
 
         p {
             margin-top: 16px;
@@ -211,12 +307,41 @@
             font-size: 16px;
             line-height: 132.19%;
             color: $ct-semi-black;
+
+            @include lg-block {
+                font-size: 13px;
+            }
+
+            @include md-block {
+                margin-top: 9px;
+                font-size: 10px;
+            }
+
+            @include s-block {
+                font-size: 12px;
+            }
+            @include xs-block {
+                font-size: 11px;
+            }
         }
     }
 
     &__img {
+        flex-grow: 1;
+
         img {
             display: block;
+            width: 156px;
+            height: 100%;
+            border-radius: 0 5px 5px 0;
+
+            @include lg-block {
+                width: 100%;
+                min-width: 90px;
+            }
+            @include s-block {
+                min-width: 116px;
+            }
         }
     }
 }
