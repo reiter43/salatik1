@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="zxx">
 
 <head>
     <meta charset="UTF-8">
@@ -23,10 +23,13 @@
 
                 <form class="form-search" aria-labelledby="form-search-1__title">
                     <h4 class="visually-hidden" id="form-search-1__title">Форма для поиска рецептов на главной</h4>
+
                     <label class="visually-hidden" for="search-input-1">Поле поиска рецептов (обязательное поле)</label>
-                    <input class="search-input" type="search" name="Поиск" id="search-input-2" placeholder="Поиск рецептов" required>
-                    <label class="visually-hidden" for="search-input-1">Поле поиска рецептов (обязательное поле)</label>
+                    <input class="search-input" type="search" name="Поиск" id="search-input-1" placeholder="Поиск рецептов" required>
+
+                    <label class="visually-hidden" for="search-input-2">Поле поиска рецептов (обязательное поле)</label>
                     <input class="search-input search-input--lg" type="search" name="Поиск" id="search-input-2" placeholder="Поиск" required>
+
                     <button class="form-search__button" aria-label="Поиск">
                         <svg class="form-search__icon">
                             <use xlink:href="img/svg/sprite.svg#search"></use>
@@ -299,12 +302,14 @@
                         <p class="recept__slogan">Наслаждайся вкусным салатом каждый день</p>
                     </figcaption>
                     <div class="recept__img">
-                        <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.webp 1x, img/images/2x/recept-img-1-576-2x.webp 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x" type="image/webp">
-                        <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.jpg 1x, img/images/2x/recept-img-1-576-2x.jpg 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x">
-                        <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.webp 1x, img/images/2x/recept-img-1-996-2x.webp 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x" type="image/webp">
-                        <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.jpg 1x, img/images/2x/recept-img-1-996-2x.jpg 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x">
-                        <source data-srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" srcset="http://placehold.it/156x168/f4f4f4.png&text=loading... 1x, http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" type="image/webp">
-                        <img class="lazyload" data-src="img/images/recept-img-1.jpg" data-srcset="img/images/2x/recept-img-1-2x.jpg 2x" src="http://placehold.it/156x168/f4f4f4.png&text=loading..." srcset="http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" alt="Салат с рукколой">
+                        <picture>
+                            <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.webp 1x, img/images/2x/recept-img-1-576-2x.webp 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x" type="image/webp">
+                            <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.jpg 1x, img/images/2x/recept-img-1-576-2x.jpg 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x">
+                            <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.webp 1x, img/images/2x/recept-img-1-996-2x.webp 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x" type="image/webp">
+                            <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.jpg 1x, img/images/2x/recept-img-1-996-2x.jpg 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x">
+                            <source data-srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" srcset="http://placehold.it/156x168/f4f4f4.png&text=loading... 1x, http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" type="image/webp">
+                            <img class="lazyload" data-src="img/images/recept-img-1.jpg" data-srcset="img/images/2x/recept-img-1-2x.jpg 2x" src="http://placehold.it/156x168/f4f4f4.png&text=loading..." srcset="http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" alt="Салат с рукколой">
+                        </picture>
                     </div>
                 </figure>
                 <figure class="recept">
@@ -313,12 +318,14 @@
                         <p class="recept__slogan">Наслаждайся вкусным салатом каждый день</p>
                     </figcaption>
                     <div class="recept__img">
-                        <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.webp 1x, img/images/2x/recept-img-1-576-2x.webp 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x" type="image/webp">
-                        <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.jpg 1x, img/images/2x/recept-img-1-576-2x.jpg 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x">
-                        <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.webp 1x, img/images/2x/recept-img-1-996-2x.webp 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x" type="image/webp">
-                        <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.jpg 1x, img/images/2x/recept-img-1-996-2x.jpg 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x">
-                        <source data-srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" srcset="http://placehold.it/156x168/f4f4f4.png&text=loading... 1x, http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" type="image/webp">
-                        <img class="lazyload" data-src="img/images/recept-img-1.jpg" data-srcset="img/images/2x/recept-img-1-2x.jpg 2x" src="http://placehold.it/156x168/f4f4f4.png&text=loading..." srcset="http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" alt="Салат с рукколой">
+                        <picture>
+                            <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.webp 1x, img/images/2x/recept-img-1-576-2x.webp 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x" type="image/webp">
+                            <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.jpg 1x, img/images/2x/recept-img-1-576-2x.jpg 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x">
+                            <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.webp 1x, img/images/2x/recept-img-1-996-2x.webp 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x" type="image/webp">
+                            <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.jpg 1x, img/images/2x/recept-img-1-996-2x.jpg 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x">
+                            <source data-srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" srcset="http://placehold.it/156x168/f4f4f4.png&text=loading... 1x, http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" type="image/webp">
+                            <img class="lazyload" data-src="img/images/recept-img-1.jpg" data-srcset="img/images/2x/recept-img-1-2x.jpg 2x" src="http://placehold.it/156x168/f4f4f4.png&text=loading..." srcset="http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" alt="Салат с рукколой">
+                        </picture>
                     </div>
                 </figure>
                 <figure class="recept">
@@ -407,12 +414,14 @@
                         <p class="recept__slogan">Наслаждайся вкусным салатом каждый день</p>
                     </figcaption>
                     <div class="recept__img">
-                        <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.webp 1x, img/images/2x/recept-img-1-576-2x.webp 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x" type="image/webp">
-                        <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.jpg 1x, img/images/2x/recept-img-1-576-2x.jpg 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x">
-                        <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.webp 1x, img/images/2x/recept-img-1-996-2x.webp 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x" type="image/webp">
-                        <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.jpg 1x, img/images/2x/recept-img-1-996-2x.jpg 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x">
-                        <source data-srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" srcset="http://placehold.it/156x168/f4f4f4.png&text=loading... 1x, http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" type="image/webp">
-                        <img class="lazyload" data-src="img/images/recept-img-1.jpg" data-srcset="img/images/2x/recept-img-1-2x.jpg 2x" src="http://placehold.it/156x168/f4f4f4.png&text=loading..." srcset="http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" alt="Салат с рукколой">
+                        <picture>
+                            <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.webp 1x, img/images/2x/recept-img-1-576-2x.webp 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x" type="image/webp">
+                            <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.jpg 1x, img/images/2x/recept-img-1-576-2x.jpg 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x">
+                            <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.webp 1x, img/images/2x/recept-img-1-996-2x.webp 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x" type="image/webp">
+                            <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.jpg 1x, img/images/2x/recept-img-1-996-2x.jpg 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x">
+                            <source data-srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" srcset="http://placehold.it/156x168/f4f4f4.png&text=loading... 1x, http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" type="image/webp">
+                            <img class="lazyload" data-src="img/images/recept-img-1.jpg" data-srcset="img/images/2x/recept-img-1-2x.jpg 2x" src="http://placehold.it/156x168/f4f4f4.png&text=loading..." srcset="http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" alt="Салат с рукколой">
+                        </picture>
                     </div>
                 </figure>
             </div>
@@ -450,7 +459,7 @@
                     </li>
                 </ul>
                 <picture>
-                    <source media="(max-width: 996px)" data-srcset="img/images/ingridients-996.webp 1x, img/images/2x/ingridients-996-2x.webp 2x" srcset="http://placehold.it/354/f4f4f4.png&text=loading... 1x, http://placehold.it/708/f4f4f4.png&text=loading... 2x" type="image/webp" type="image/webp">
+                    <source media="(max-width: 996px)" data-srcset="img/images/ingridients-996.webp 1x, img/images/2x/ingridients-996-2x.webp 2x" srcset="http://placehold.it/354/f4f4f4.png&text=loading... 1x, http://placehold.it/708/f4f4f4.png&text=loading... 2x" type="image/webp">
                     <source media="(max-width: 996px)" data-srcset="img/images/ingridients-996.jpg 1x, img/images/2x/ingridients-996-2x.jpg 2x" srcset="http://placehold.it/354/f4f4f4.png&text=loading...1x, http://placehold.it/708/f4f4f4.png&text=loading... 2x">
                     <source data-srcset="img/images/ingridients.webp 1x, img/images/2x/ingridients-2x.webp 2x" srcset="http://placehold.it/540/f4f4f4.png&text=loading... 1x, http://placehold.it/1080/f4f4f4.png&text=loading... 2x" type="image/webp">
                     <img class="lazyload" data-src="img/images/ingridients.png" data-srcset="img/images/2x/ingridients-2x.png 2x" src="http://placehold.it/540/f4f4f4.png&text=loading..." srcset="http://placehold.it/1080/f4f4f4.png&text=loading... 2x" alt=" Ингридиенты для рецептов">
@@ -605,13 +614,13 @@
 </main>
 
 <!-- Модальные окна для секции ingridients -->
-<div class="modal" id="modal-fruits" role="dialog" aria-labelledby="modal__title" aria-modal="true">
+<div class="modal" id="modal-fruits" role="dialog" aria-labelledby="modal__title-fruits" aria-modal="true">
     <div class="modal__dialog">
         <button type="button" class="btn-close modal__btn-close" tabindex="0" data-close-modal aria-label="Закрыть окно">
             <span></span>
         </button>
         <div class="modal__content">
-            <h3 class="modal__title-modal" id="modal-title-fruits">
+            <h3 class="modal__title-modal" id="modal__title-fruits">
                 Фруктовые ингридиенты
             </h3>
             <div class="modal__body">
@@ -626,13 +635,13 @@
         </div>
     </div>
 </div>
-<div class="modal" id="modal-meat" role="dialog" aria-labelledby="modal__title" aria-modal="true">
+<div class="modal" id="modal-meat" role="dialog" aria-labelledby="modal__title-meat" aria-modal="true">
     <div class="modal__dialog">
         <button type="button" class="btn-close modal__btn-close" tabindex="0" data-close-modal aria-label="Закрыть окно">
             <span></span>
         </button>
         <div class="modal__content">
-            <h3 class="modal__title-modal" id="modal-title-meat">
+            <h3 class="modal__title-modal" id="modal__title-meat">
                 Мясные ингридиенты
             </h3>
             <div class="modal__body">
@@ -647,13 +656,13 @@
         </div>
     </div>
 </div>
-<div class="modal" id="modal-vegetables" role="dialog" aria-labelledby="modal__title" aria-modal="true">
+<div class="modal" id="modal-vegetables" role="dialog" aria-labelledby="modal__title-vegetables" aria-modal="true">
     <div class="modal__dialog">
         <button type="button" class="btn-close modal__btn-close" tabindex="0" data-close-modal aria-label="Закрыть окно">
             <span></span>
         </button>
         <div class="modal__content">
-            <h3 class="modal__title-modal" id="modal-title-vegetables">
+            <h3 class="modal__title-modal" id="modal__title-vegetables">
                 Овощные ингридиенты
             </h3>
             <div class="modal__body">
@@ -668,13 +677,13 @@
         </div>
     </div>
 </div>
-<div class="modal" id="modal-greenery" role="dialog" aria-labelledby="modal__title" aria-modal="true">
+<div class="modal" id="modal-greenery" role="dialog" aria-labelledby="modal__title-greenery" aria-modal="true">
     <div class="modal__dialog">
         <button type="button" class="btn-close modal__btn-close" tabindex="0" data-close-modal aria-label="Закрыть окно">
             <span></span>
         </button>
         <div class="modal__content">
-            <h3 class="modal__title-modal" id="modal-title-greenery">
+            <h3 class="modal__title-modal" id="modal__title-greenery">
                 Зелень
             </h3>
             <div class="modal__body">
@@ -689,13 +698,13 @@
         </div>
     </div>
 </div>
-<div class="modal" id="modal-fish" role="dialog" aria-labelledby="modal__title" aria-modal="true">
+<div class="modal" id="modal-fish" role="dialog" aria-labelledby="modal__title-fish" aria-modal="true">
     <div class="modal__dialog">
         <button type="button" class="btn-close modal__btn-close" tabindex="0" data-close-modal aria-label="Закрыть окно">
             <span></span>
         </button>
         <div class="modal__content">
-            <h3 class="modal__title-modal" id="modal-title-fish">
+            <h3 class="modal__title-modal" id="modal__title-fish">
                 Рыбные составляющие
             </h3>
             <div class="modal__body">
