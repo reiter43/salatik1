@@ -1,6 +1,6 @@
 /*=============================================
       ОБЩИЕ ПРАВИЛА
-  =============================================*/
+=============================================*/
 $font-family-days: Days, Arial, sans-serif;
 $font-family-roboto: Roboto, Arial, sans-serif;
 
@@ -24,7 +24,8 @@ $cf-black: #444444;
 
 
 *:focus {
-    outline: 3px solid pink;
+    outline: none;
+    box-shadow: 0 0 0 0.2em pink;
 }
 
 .wrapper {

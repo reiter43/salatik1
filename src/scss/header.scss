@@ -2,6 +2,7 @@
         ШАПКА
 =============================================*/
 .header-topline {
+    position: relative;
     padding: 13px 0;
     background: $cf-white;
 
@@ -179,7 +180,56 @@
             line-height: 100%;
         }
     }
+
+    &--mob {
+        display: none;
+        width: 100%;
+        margin: 0;
+        padding: 0 16px;
+        background: $cf-light-gray;
+
+        @include sm-block {
+            display: block;
+        }
+
+        &__list {
+            padding: 20px 0 16px;
+            list-style-type: none;
+            border-bottom: 2px solid $ct-green;
+
+            @include xs-block {
+                border-bottom-width: 1px;
+            }
+        }
+
+        &__item:not(:last-child) {
+            margin-bottom: 8px;
+        }
+
+        &__link {
+            display: block;
+            font-family: $font-family-roboto;
+            color: $ct-black;
+            transition: color ease 0.5s;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            padding: 6px 0;
+
+            @include xs-block {
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+            &:hover {
+                color: $ct-green;
+            }
+        }
+
+    }
 }
+
+
 
 .header-downline {
     background: $ct-light-gray;
@@ -194,41 +244,95 @@
 
     @include sm-block {
         display: none;
+        position: absolute;
+        left: 28px;
+        width: 100%;
+        z-index: 20;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    &.active {
+        display: block;
+        animation: fadeMenu 0.5s ease-out;
     }
 
     &__list {
         display: flex;
         align-items: flex-start;
         list-style-type: none;
+
+        @include sm-block {
+            flex-direction: column;
+            padding: 20px 16px 16px;
+            background: $cf-light-gray;
+        }
     }
 
     &__item {
         position: relative;
-        transition: background-color ease 0.5s;
+        transition: background-color ease 0.5s color ease 0.5s;
         cursor: pointer;
+
+        @include sm-block {
+            margin-bottom: 8px;
+        }
 
         svg {
             @include svg(9px, 4px, transparent);
             margin-left: 8px;
             stroke: $ct-black;
             stroke-width: 2px;
+
+            @include md-block {
+                margin-left: 0;
+            }
+
+            @include sm-block {
+                @include svg(14px, 7px, transparent);
+                margin-left: 4px;
+                stroke: #F2994A;
+
+
+            }
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $cf-gray;
+
+            @include sm-block {
+                background: transparent;
+            }
         }
 
-        &:hover .nav__sublist {
-            max-height: 500px;
-            padding-top: 8px;
-            padding-bottom: 24px;
+        &:hover .nav__link {
+            @include sm-block {
+                color: $ct-green;
+            }
         }
+
+        // &:hover .nav__sublist {
+        //     max-height: 500px;
+        //     padding-top: 8px;
+        //     padding-bottom: 24px;
+
+        //     @include sm-block {
+        //         height: auto;
+        //         padding-top: 0px;
+        //         padding-bottom: 0px;
+        //     }
+        // }
     }
 
     &__item:first-child {
         .nav__link {
             @include lg-block {
                 padding-left: 24px;
+            }
+
+            @include sm-block {
+                text-align: left;
+                padding-left: 0;
             }
         }
     }
@@ -240,15 +344,39 @@
         font-size: 16px;
         line-height: 19px;
         color: $ct-black;
+        transition: color ease 0.5s;
 
         @include lg-block {
             padding: 20px 16px;
             font-size: 14px;
             line-height: 180%;
         }
+
+        @include sm-block {
+            font-size: 16px;
+            line-height: 20px;
+            padding: 6px 0;
+        }
+
+        @include xs-block {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &.active + .nav__sublist{
+            max-height: 500px;
+            padding-top: 8px;
+            padding-bottom: 24px;
+            transition: max-height .5s ease, padding 0.2s ease;
+
+            @include sm-block {
+                height: auto;
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+
+        }
     }
-
-
 
     &__sublist {
         position: absolute;
@@ -263,7 +391,7 @@
         background: $cf-white;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         list-style-type: none;
-        transition: max-height 0.2s ease-in, padding 0.1s ease-in;
+        transition: max-height 0.3s ease, padding 0.1s ease;
         column-count: 2;
         column-gap: 40px;
         column-fill: auto;
@@ -275,12 +403,36 @@
 
         &--buter {
             width: 255%;
+
+            @include sm-block {
+                width: 100%;
+            }
+        }
+
+        @include sm-block {
+            position: static;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            column-count: auto;
         }
     }
 
     &__subitem {
         display: block;
         padding-top: 16px;
+
+        @include sm-block {
+            padding-top: 0;
+        }
+    }
+
+    &__subitem:not(:first-child) {
+
+        @include sm-block {
+            padding-top: 8px;
+        }
+
     }
 
     &__sublink {
@@ -296,9 +448,31 @@
             line-height: 16px;
         }
 
+        @include xs-block {
+            font-size: 12px;
+            line-height: 14px;
+        }
+
         &:hover {
             color: $ct-green;
         }
+    }
+}
+
+@keyframes fadeMenu {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
     }
 }
 

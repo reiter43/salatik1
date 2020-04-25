@@ -4,6 +4,7 @@ import "./vendors/slider-owl";
 import 'lazysizes';
 
 // import tab from './modules/tabs';
+import menu from './modules/menu';
 import modalWindow from './modules/modal';
 // import { dropDown, dropDownAct } from './modules/dropdown';
 import check from './modules/checkbox';
@@ -12,11 +13,14 @@ import check from './modules/checkbox';
 
 window.addEventListener('DOMContentLoaded', () => {
     "use strict";
-    
+
     check('.checkbox-footer__input');
-    modalWindow('#fruits', '#modal-fruits'),
-    modalWindow('#meat', '#modal-meat'),
-    modalWindow('#vegetables', '#modal-vegetables'),
-    modalWindow('#greenery', '#modal-greenery'),
-    modalWindow('#fish', '#modal-fish')
+    modalWindow('#fruits', '#modal-fruits');
+    modalWindow('#meat', '#modal-meat');
+    modalWindow('#vegetables', '#modal-vegetables');
+    modalWindow('#greenery', '#modal-greenery');
+    modalWindow('#fish', '#modal-fish');
+    menu('.burger', '.nav__link--drop');
 });
+
+
