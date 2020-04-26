@@ -12,20 +12,6 @@ $(document).ready(function () {
         nav: false,
         dots: true,
         lazyLoad: true,
-        // responsive: {
-        //     1: {
-        //         items: 1,
-        //     },
-        //     600: {
-        //         items: 2,
-        //     },
-        //     1010: {
-        //         items: 3,
-        //     },
-        //     1450: {
-        //         dots: false,
-        //     },
-        // }
     });
 
     owlSlider.owlCarousel();
@@ -36,4 +22,6 @@ $(document).ready(function () {
     $("#slider__arrow-rigth").click(function () {
         owlSlider.trigger("next.owl.carousel");
     });
+
+    $('.owl-dot').attr('aria-label', 'Переключение слайда');
 });
