@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="a-up">
         <div class="header-topline">
             <div class="wrapper header-topline__wrap">
                 <div class="header-topline__burger" aria-hidden="true">
@@ -38,7 +38,7 @@
                 </form>
 
                 <nav class="nav-site" id="nav-site" aria-label="Навигация по сайту">
-                    <ul class="nav-site__list">
+                    <ul class="nav-site__list" aria-label="Навигация по сайту">
                         <li class="nav-site__item">
                             <a href="#" class="nav-site__link">Новости</a>
                         </li>
@@ -82,7 +82,7 @@
             <div class="wrapper">
                 <nav class="nav" aria-label="Навигация по контенту">
                     <nav class="nav-site--mob" id="nav-site--mob" aria-label="Навигация по сайту">
-                        <ul class="nav-site--mob__list">
+                        <ul class="nav-site--mob__list" aria-label="Навигация по сайту">
                             <li class="nav-site--mob__item">
                                 <a href="#" class="nav-site--mob__link">Новости</a>
                             </li>
@@ -100,15 +100,15 @@
                             </li>
                         </ul>
                     </nav>
-                    <ul class="nav__list" role="menubar">
+                    <ul class="nav__list" role="menubar" aria-label="Навигация по контенту">
                         <li class="nav__item nav__item--drop" role="none presentation">
-                            <button type="button" class="nav__link btn-icon nav__link--drop" aria-expanded="false" aria-haspopup="true">
+                            <button type="button" class="nav__link btn-icon nav__link--drop" aria-expanded="false">
                                 <span>Салаты</span>
                                 <svg aria-hidden="true" focusable="false">
                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
                                 </svg>
                             </button>
-                            <ul class="nav__sublist" role="menu">
+                            <ul class="nav__sublist" role="menu" aria-haspopup="true" aria-label="Салаты">
                                 <li class="nav__subitem" role="none presentation">
                                     <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Мясные</a>
                                 </li>
@@ -139,13 +139,13 @@
                             </ul>
                         </li>
                         <li class="nav__item nav__item--drop" role="none presentation">
-                            <button class="nav__link nav__link--drop btn-icon" aria-expanded="false" aria-haspopup="true">
+                            <button class="nav__link nav__link--drop btn-icon" aria-expanded="false">
                                 <span>Бутерброды</span>
                                 <svg aria-hidden="true" focusable="false">
                                     <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
                                 </svg>
                             </button>
-                            <ul class="nav__sublist nav__sublist--buter" role="menu">
+                            <ul class="nav__sublist nav__sublist--buter" role="menu" aria-haspopup="true" aria-label="Бутерброды">
                                 <li class="nav__subitem" role="none presentation">
                                     <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Овощи и зелень</a>
                                 </li>
@@ -844,11 +844,11 @@
         </div>
     </div>
 
-    <button class="btn-up" aria-label="Наверх">
+    <a href="#a-up" class="btn-up" aria-label="Наверх">
         <svg aria-hidden="true">
             <use xlink:href="img/svg/sprite.svg#up"></use>
         </svg>
-    </button>
+    </a>
 </footer>
 
 <script src="./js/script.js"></script>

@@ -491,10 +491,11 @@
         text-align: center;
         border: 1px solid $ct-gray-lines;
         border-radius: 4px;
-        background: $ct-light-gray;
+        background-color: $cf-light-gray;
         font-size: 18px;
         color: $ct-black;
         cursor: pointer;
+        transition: background-color 0.1s;
 
         @include s-block {
             width: 100%;
@@ -502,6 +503,10 @@
 
         @include xs-block {
             font-size: 14px;
+        }
+
+        &.active {
+            background-color: darken($cf-light-gray, 5%)
         }
 
         svg {

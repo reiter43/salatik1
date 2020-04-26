@@ -1,13 +1,13 @@
 const accordion = (accordionTrigger) => {
     const accordionBars = document.querySelectorAll(accordionTrigger);
 
-    if (accordionBars[0].tagName !== 'button') {
-        accordionBars.forEach((el) => {
-            el.addEventListener('keydown', (event) => {
-                if (event.keyCode === 13 || event.keyCode === 32) { run(el); }
-            });
-        });
-    }
+    // if (accordionBars[0].tagName !== 'button') {
+    //     accordionBars.forEach((el) => {
+    //         el.addEventListener('keydown', (event) => {
+    //             if (event.keyCode === 13 || event.keyCode === 32) { run(el); }
+    //         });
+    //     });
+    // }
 
     accordionBars.forEach((el) => {
         el.addEventListener('click', () => { run(el); });
