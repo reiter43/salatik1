@@ -16700,13 +16700,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var accordion = function accordion(accordionTrigger) {
-  var accordionBars = document.querySelectorAll(accordionTrigger); // if (accordionBars[0].tagName !== 'button') {
-  //     accordionBars.forEach((el) => {
-  //         el.addEventListener('keydown', (event) => {
-  //             if (event.keyCode === 13 || event.keyCode === 32) { run(el); }
-  //         });
-  //     });
-  // }
+  var accordionBars = document.querySelectorAll(accordionTrigger);
+
+  if (accordionBars[0].tagName !== 'button') {
+    accordionBars.forEach(function (el) {
+      el.addEventListener('keydown', function (event) {
+        if (event.keyCode === 13 || event.keyCode === 32) {
+          run(el);
+        }
+      });
+    });
+  }
 
   accordionBars.forEach(function (el) {
     el.addEventListener('click', function () {
