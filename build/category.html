@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Поиск и добавление рецептов различных салатов и бутербродов">
+    <title>Салаты овощные</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/images/favicon-16x16.png">
+    <link rel="mask-icon" href="img/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <header class="header" id="a-up">
+        <div class="header-topline">
+            <div class="wrapper header-topline__wrap">
+                <div class="header-topline__burger" aria-hidden="true">
+                    <button class="burger" aria-expanded="false" aria-controls="nav-site" aria-label="Мобильное меню">
+                        <span class="burger__icon"></span>
+                    </button>
+                </div>
+
+                <a href="#" class="logo">SALATIK</a>
+
+                <form class="form-search" aria-labelledby="form-search-1__title">
+                    <h4 class="visually-hidden" id="form-search-1__title">Форма для поиска рецептов на главной</h4>
+
+                    <label class="visually-hidden" for="search-input-1">Поле поиска рецептов (обязательное поле)</label>
+                    <input class="search-input" type="search" name="Поиск" id="search-input-1" placeholder="Поиск рецептов" required>
+
+                    <label class="visually-hidden" for="search-input-2">Поле поиска рецептов (обязательное поле)</label>
+                    <input class="search-input search-input--lg" type="search" name="Поиск" id="search-input-2" placeholder="Поиск" required>
+
+                    <button class="form-search__button" aria-label="Поиск">
+                        <svg class="form-search__icon">
+                            <use xlink:href="img/svg/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
+
+                <nav class="nav-site" id="nav-site" aria-label="Навигация по сайту">
+                    <ul class="nav-site__list" aria-label="Навигация по сайту">
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">Новости</a>
+                        </li>
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">О блоге</a>
+                        </li>
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">Реклама</a>
+                        </li>
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">Контакты</a>
+                        </li>
+                        <li class="nav-site__item">
+                            <a href="#" class="nav-site__link">Разное</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-topline__btn">
+                    <button class="btn">
+                        <span id="in">Вход</span>
+                        <svg role="img" aria-labelledby="in">
+                            <use xlink:href="img/svg/sprite.svg#user"></use>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="header-topline__link-login" aria-label="Переход на страницу регистрации">Регистрация</a>
+
+                <div class="header-topline__btn-search">
+                    <button class="btn-search" aria-label="Поиск рецептов">
+                        <svg>
+                            <use xlink:href="img/svg/sprite.svg#btn-search"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-downline">
+            <div class="wrapper">
+                <nav class="nav" aria-label="Навигация по контенту">
+                    <nav class="nav-site--mob" id="nav-site--mob" aria-label="Навигация по сайту">
+                        <ul class="nav-site--mob__list" aria-label="Навигация по сайту">
+                            <li class="nav-site--mob__item">
+                                <a href="#" class="nav-site--mob__link">Новости</a>
+                            </li>
+                            <li class="nav-site--mob__item">
+                                <a href="#" class="nav-site--mob__link">О блоге</a>
+                            </li>
+                            <li class="nav-site--mob__item">
+                                <a href="#" class="nav-site--mob__link">Реклама</a>
+                            </li>
+                            <li class="nav-site--mob__item">
+                                <a href="#" class="nav-site--mob__link">Контакты</a>
+                            </li>
+                            <li class="nav-site__item--mob">
+                                <a href="#" class="nav-site--mob__link">Разное</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="nav__list" role="menubar" aria-label="Навигация по контенту">
+                        <li class="nav__item nav__item--drop" role="none">
+                            <button type="button" class="nav__link btn-icon nav__link--drop" aria-expanded="false">
+                                <span>Салаты</span>
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </button>
+                            <ul class="nav__sublist" role="menu" aria-haspopup="true" aria-label="Салаты">
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Мясные</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="category.html" class="nav__sublink" tabindex="-1" role="menuitem">Овощные</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Рыбные</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Морепродукты</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Фруктовые</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Ассорти</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Сладкие</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Постные</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Птица</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item nav__item--drop" role="none">
+                            <button class="nav__link nav__link--drop btn-icon" aria-expanded="false">
+                                <span>Бутерброды</span>
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </button>
+                            <ul class="nav__sublist nav__sublist--buter" role="menu" aria-haspopup="true" aria-label="Бутерброды">
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Овощи и зелень</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Грибные</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">С сыром</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Рыба</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Морепродукты</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">С колбасой</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Мясные</a>
+                                </li>
+                                <li class="nav__subitem" role="none">
+                                    <a href="#" class="nav__sublink" tabindex="-1" role="menuitem">Двойные (сэндвичи)</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item" role="none">
+                            <a href="#" class="nav__link" role="menuitem">Канапе</a>
+                        </li>
+                        <li class="nav__item" role="none">
+                            <a href="#" class="nav__link" role="menuitem">Гренки</a>
+                        </li>
+                        <li class="nav__item" role="none">
+                            <a href="#" class="nav__link" role="menuitem">Тосты</a>
+                        </li>
+                        <li class="nav__item" role="none">
+                            <a href="#" class="nav__link" role="menuitem">Тартинки</a>
+                        </li>
+                        <li class="nav__item" role="none">
+                            <a href="#" class="nav__link" role="menuitem">Закуски</a>
+                        </li>
+                        <li class="nav__item" role="none">
+                            <a href="#" class="nav__link" role="menuitem">Заправки</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+<div class="content-inner">
+    <section class="category-recept">
+        <div class="wrapper">
+            <h2 class="title-page">Салаты овощные</h2>
+            <p class="category-recept__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum cursus lorem a leo imperdiet, ac dignissim</p>
+
+            <ul class="category-recept__list">
+                <li class="category-recept__item">
+                    <figure class="recept-cat">
+                        <figcaption class="recept-cat__desc">
+                            <h5 class="title-recept">Оливье</h5>
+                            <p class="recept-cat__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis</p>
+                            <div class="recept-cat__footer">
+                                <div class="recept-cat__time">
+                                    <svg role="img" focusable="false">
+                                        <title>Время приготовления</title>
+                                        <use xlink:href="img/svg/sprite.svg#time" aria-hidden="true"></use>
+                                    </svg>
+                                    <span>20 мин</span>
+                                </div>
+                                <div class="recept-cat__metrics">
+                                    <ul class="recept-cat__list">
+                                        <li class="recept-cat__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество лайков</title>
+                                                <use xlink:href="img/svg/sprite.svg#like" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>100</span>
+                                        </li>
+                                        <li class="recept-cat__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество комментариев</title>
+                                                <use xlink:href="img/svg/sprite.svg#comments" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>10</span>
+                                        </li>
+                                        <li class="recept-cat__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество просмотров</title>
+                                                <use xlink:href="img/svg/sprite.svg#see" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>10</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </figcaption>
+                        <img src="img/images/recept-cat-1.jpg" alt="Ингридиенты для салата">
+                    </figure>
+                </li>
+            </ul>
+
+            <ul class="pagination" aria-label="Пагинация рецептов">
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">
+                        <svg aria-hidden="true" focusable="false">
+                            <use xlink:href="img/svg/sprite.svg#pagin-prev""></use>
+                        </svg>
+                        <span class=" visually-hidden">Предыдущая страница</span>
+                    </a>
+                </li>
+                <li class="pagination__item active">
+                    <a href="#" class="pagination__link"><span class="visually-hidden">Страница</span>1</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link"><span class="visually-hidden">Страница</span>2</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link"><span class="visually-hidden">Страница</span>3</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">
+                        <svg aria-hidden="true" focusable="false">
+                            <use xlink:href="img/svg/sprite.svg#pagin-next""></use>
+                        </svg>
+                        <span class=" visually-hidden">Следующая страница</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <aside>
+        <form action="" class="form-suscribe"></form>
+        <section class="recept-pop"></section>
+        <section class="reklama"></section>
+    </aside>
+</div>
+
+<footer class="footer">
+    <div class="footer__topline">
+        <div class="wrapper">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <a href="index.html" class="logo logo--footer">Салатик</a>
+                    <p class="footer__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis in</p>
+                </div>
+
+                <div class="footer__form">
+                    <form class="form-footer" aria-describedby="form-footer__desc">
+                        <p class="form-footer__desc" id="form-footer__desc">Подписывайтесь на обновления и получайте новые рецепты каждый день!</p>
+
+                        <!-- Hidden Required Fields -->
+                        <input type="hidden" name="project_name" value="http://f0315577.xsph.ru/salatik">
+                        <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                        <input type="hidden" name="form_subject" value="Сайт SALATIK. Подписка из футера">
+                        <!-- END Hidden Required Fields -->
+
+                        <label class="email">
+                            <span class="visually-hidden">Введите email(обязательное поле)</span>
+                            <input class="email__input" type="email" name="email" placeholder="Введите ваш email" required="required">
+                        </label>
+
+                        <button class="btn-submit btn-submit--suscribe-footer form-footer__btn-submit">Подписаться</button>
+
+                        <label class="checkbox-footer">
+                            <input class="checkbox-footer__input" type="checkbox" name="Обработка данных" aria-checked="false">
+                            <span class="checkbox-footer__fake"></span>
+                            Согласие на обработку персональных данных
+                        </label>
+                    </form>
+                </div>
+
+                <div class="footer__socials">
+                    <nav class="nav-footer">
+                        <ul class="nav-footer__list">
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Главная</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Рецепты</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">О блоге</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Реклама</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="socials">
+                        <h5 class="socials__title">Мы в социальных сетях</h5>
+                        <ul class="socials__list">
+                            <li class="socials__item" style="background: #4680C2">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background: #3B5998">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#fb"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background: linear-gradient(49.12deg, #FFDD55 6.62%, #FF543E 32.09%, #D62976 53.83%, #C837AB 71.22%, #4F5BD5 90.92%)">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#inst"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background: #DC4E41">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#google+"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background:#4CAF50">
+                                <a href="#" class="socials__link socials__link--ws" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#whatsap"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background: #7F40BD">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#viber"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background: #30B0E1">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__item" style="background:#ED812B">
+                                <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="img/svg/sprite.svg#odno"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copy">
+        <div class="wrapper">
+            <div class="footer-copy__content">
+                <p class="footer-copy__info">2019 SALATIK - All Rights Reserved</p>
+                <div class="footer-copy__metrics">
+                    <div class="footer-copy__count"><a href="#">Счетчик</a></div>
+                    <div class="footer-copy__count"><a href="#">Счетчик</a></div>
+                    <div class="footer-copy__count"><a href="#">Счетчик</a></div>
+                    <div class="footer-copy__count"><a href="#">Счетчик</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#a-up" class="btn-up" aria-label="Наверх">
+        <svg aria-hidden="true">
+            <use xlink:href="img/svg/sprite.svg#up"></use>
+        </svg>
+    </a>
+</footer>
+
+<script src="./js/script.js"></script>
+
+</body>
+
+</html>

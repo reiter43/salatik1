@@ -1,0 +1,92 @@
+@include('./components/header.html', {"title": "Салаты овощные"})
+
+<div class="content-inner">
+    <section class="category-recept">
+        <div class="wrapper">
+            <h2 class="title-page">Салаты овощные</h2>
+            <p class="category-recept__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum cursus lorem a leo imperdiet, ac dignissim</p>
+
+            <ul class="category-recept__list">
+                <li class="category-recept__item">
+                    <figure class="recept-cat">
+                        <figcaption class="recept-cat__desc">
+                            <h5 class="title-recept">Оливье</h5>
+                            <p class="recept-cat__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis</p>
+                            <div class="recept-cat__footer">
+                                <div class="recept-cat__time">
+                                    <svg role="img" focusable="false">
+                                        <title>Время приготовления</title>
+                                        <use xlink:href="img/svg/sprite.svg#time" aria-hidden="true"></use>
+                                    </svg>
+                                    <span>20 мин</span>
+                                </div>
+                                <div class="recept-cat__metrics">
+                                    <ul class="recept-cat__list">
+                                        <li class="recept-cat__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество лайков</title>
+                                                <use xlink:href="img/svg/sprite.svg#like" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>100</span>
+                                        </li>
+                                        <li class="recept-cat__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество комментариев</title>
+                                                <use xlink:href="img/svg/sprite.svg#comments" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>10</span>
+                                        </li>
+                                        <li class="recept-cat__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество просмотров</title>
+                                                <use xlink:href="img/svg/sprite.svg#see" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>10</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </figcaption>
+                        <img src="img/images/recept-cat-1.jpg" alt="Ингридиенты для салата">
+                    </figure>
+                </li>
+            </ul>
+
+            <ul class="pagination" aria-label="Пагинация рецептов">
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">
+                        <svg aria-hidden="true" focusable="false">
+                            <use xlink:href="img/svg/sprite.svg#pagin-prev""></use>
+                        </svg>
+                        <span class=" visually-hidden">Предыдущая страница</span>
+                    </a>
+                </li>
+                <li class="pagination__item active">
+                    <a href="#" class="pagination__link"><span class="visually-hidden">Страница</span>1</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link"><span class="visually-hidden">Страница</span>2</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link"><span class="visually-hidden">Страница</span>3</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">
+                        <svg aria-hidden="true" focusable="false">
+                            <use xlink:href="img/svg/sprite.svg#pagin-next""></use>
+                        </svg>
+                        <span class=" visually-hidden">Следующая страница</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <aside>
+        <form action="" class="form-suscribe"></form>
+        <section class="recept-pop"></section>
+        <section class="reklama"></section>
+    </aside>
+</div>
+
+@include('./components/footer.html')

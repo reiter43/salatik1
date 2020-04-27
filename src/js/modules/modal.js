@@ -1,5 +1,6 @@
 const modalWindow = (btnsOpen, windowModal) => {
-    const btnsOpenWindow = document.querySelectorAll(btnsOpen);
+    if (document.querySelector('.modal')) {
+        const btnsOpenWindow = document.querySelectorAll(btnsOpen);
     const modal = document.querySelector(windowModal);
     const modalDialog = modal.firstElementChild;
     const btnsClose = document.querySelectorAll('[data-close-modal]');
@@ -53,6 +54,7 @@ const modalWindow = (btnsOpen, windowModal) => {
 
         return scrollWidth;
     }
+    }    
 };
 
 export default modalWindow;

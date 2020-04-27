@@ -16700,17 +16700,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var accordion = function accordion(accordionTrigger) {
-  var accordionBars = document.querySelectorAll(accordionTrigger);
-
-  if (accordionBars[0].tagName !== 'button') {
-    accordionBars.forEach(function (el) {
-      el.addEventListener('keydown', function (event) {
-        if (event.keyCode === 13 || event.keyCode === 32) {
-          run(el);
-        }
-      });
-    });
-  }
+  var accordionBars = document.querySelectorAll(accordionTrigger); // if (accordionBars[0].tagName !== 'button') {
+  //     accordionBars.forEach((el) => {
+  //         el.addEventListener('keydown', (event) => {
+  //             if (event.keyCode === 13 || event.keyCode === 32) { run(el); }
+  //         });
+  //     });
+  // }
 
   accordionBars.forEach(function (el) {
     el.addEventListener('click', function () {
@@ -16843,66 +16839,68 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var modalWindow = function modalWindow(btnsOpen, windowModal) {
-  var btnsOpenWindow = document.querySelectorAll(btnsOpen);
-  var modal = document.querySelector(windowModal);
-  var modalDialog = modal.firstElementChild;
-  var btnsClose = document.querySelectorAll('[data-close-modal]');
-  var focusableElements = modal.querySelectorAll('[tabindex="0"]');
-  var lastFocus;
-  btnsOpenWindow.forEach(function (el) {
-    el.addEventListener('click', showModal);
-  });
-  btnsClose.forEach(function (el) {
-    el.addEventListener('click', closeModal);
-  });
-  modal.addEventListener('click', function (e) {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  function showModal() {
-    lastFocus = document.activeElement;
-    modal.classList.add('visial');
-    modalDialog.classList.remove('close');
-    modalDialog.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    document.body.style.marginRight = "".concat(calcScroll(), "px");
-    focusableElements[1].focus();
-    modal.addEventListener('keydown', function (e) {
-      if (e.keyCode === 9) {
-        if (e.shiftKey) {
-          if (document.activeElement === focusableElements[0]) {
-            focusableElements[focusableElements.length - 1].focus();
-          }
-        } else if (document.activeElement === focusableElements[focusableElements.length - 1]) {
-          focusableElements[0].focus();
-        }
-      }
-
-      if (e.keyCode === 27) {
+  if (document.querySelector('.modal')) {
+    var btnsOpenWindow = document.querySelectorAll(btnsOpen);
+    var modal = document.querySelector(windowModal);
+    var modalDialog = modal.firstElementChild;
+    var btnsClose = document.querySelectorAll('[data-close-modal]');
+    var focusableElements = modal.querySelectorAll('[tabindex="0"]');
+    var lastFocus;
+    btnsOpenWindow.forEach(function (el) {
+      el.addEventListener('click', showModal);
+    });
+    btnsClose.forEach(function (el) {
+      el.addEventListener('click', closeModal);
+    });
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
         closeModal();
       }
     });
-  }
 
-  function closeModal() {
-    modalDialog.classList.remove('open');
-    modalDialog.classList.add('close');
-    setTimeout(function () {
-      modal.classList.remove('visial');
-      document.body.removeAttribute('style');
-      lastFocus.focus();
-    }, 200);
-  }
+    function showModal() {
+      lastFocus = document.activeElement;
+      modal.classList.add('visial');
+      modalDialog.classList.remove('close');
+      modalDialog.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.body.style.marginRight = "".concat(calcScroll(), "px");
+      focusableElements[1].focus();
+      modal.addEventListener('keydown', function (e) {
+        if (e.keyCode === 9) {
+          if (e.shiftKey) {
+            if (document.activeElement === focusableElements[0]) {
+              focusableElements[focusableElements.length - 1].focus();
+            }
+          } else if (document.activeElement === focusableElements[focusableElements.length - 1]) {
+            focusableElements[0].focus();
+          }
+        }
 
-  function calcScroll() {
-    var div = document.createElement('div');
-    div.setAttribute('style', 'width: 50px; height: 50px; overflow-y: scroll; visibility: hidden;');
-    document.body.appendChild(div);
-    var scrollWidth = div.offsetWidth - div.clientWidth;
-    div.remove();
-    return scrollWidth;
+        if (e.keyCode === 27) {
+          closeModal();
+        }
+      });
+    }
+
+    function closeModal() {
+      modalDialog.classList.remove('open');
+      modalDialog.classList.add('close');
+      setTimeout(function () {
+        modal.classList.remove('visial');
+        document.body.removeAttribute('style');
+        lastFocus.focus();
+      }, 200);
+    }
+
+    function calcScroll() {
+      var div = document.createElement('div');
+      div.setAttribute('style', 'width: 50px; height: 50px; overflow-y: scroll; visibility: hidden;');
+      document.body.appendChild(div);
+      var scrollWidth = div.offsetWidth - div.clientWidth;
+      div.remove();
+      return scrollWidth;
+    }
   }
 };
 

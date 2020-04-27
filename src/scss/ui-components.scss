@@ -200,6 +200,15 @@
 /*---------------------------------------------
     Заголовки
 ---------------------------------------------*/
+.title-page {
+    margin: 0;
+    font-family: $font-family-days;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 100.79%;
+    color: $ct-black;
+}
+
 .title-section {
     margin: 0;
     text-align: center;
@@ -247,6 +256,7 @@
     @include s-block {
         font-size: 16px;
     }
+
     @include xs-block {
         font-size: 13px;
     }
@@ -283,6 +293,7 @@
         max-width: 285px;
         margin-bottom: 32px;
     }
+
     @include s-block {
         max-width: 340px;
     }
@@ -320,6 +331,7 @@
             @include s-block {
                 font-size: 12px;
             }
+
             @include xs-block {
                 font-size: 11px;
             }
@@ -339,6 +351,7 @@
                 width: 100%;
                 min-width: 90px;
             }
+
             @include s-block {
                 min-width: 116px;
             }

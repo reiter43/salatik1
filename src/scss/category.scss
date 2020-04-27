@@ -1,0 +1,33 @@
+/*=============================================
+        СТРАНИЦА КАТЕГОРИИ
+=============================================*/
+.content-inner {
+    background: $cf-white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.category-recept {
+
+    &__desc {
+        margin-top: 32px;
+        font-family: $font-family-roboto;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 132.19%;
+        color: $ct-semi-black;
+    }
+
+    &__list {
+        margin-top: 60px;
+        list-style-type: none;
+    }
+
+    &__item {
+        padding: 40px 0;
+    }
+}
+
+.recept-cat {
+    display: flex;
+}
