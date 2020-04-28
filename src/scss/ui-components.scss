@@ -2,7 +2,7 @@
     Кнопки
 ---------------------------------------------*/
 .btn {
-    padding: 6px 27px 8px;
+    padding: 8px 27px 8px;
     text-align: center;
     border: none;
     border-radius: 20px;
@@ -264,6 +264,7 @@
 
 .title-sub {
     margin: 0;
+    text-align: center;
     font-family: $font-family-roboto;
     font-size: 20px;
     line-height: 23px;
@@ -357,4 +358,137 @@
             }
         }
     }
+}
+/*------------------------------------------------*/
+
+/*---------------------------------------------
+    Aside
+---------------------------------------------*/
+
+.aside {
+    min-width: 340px;
+    margin-left: 80px;
+    padding-top: 32px;
+}
+
+.form-suscribe {
+    padding: 21px 32px 32px;
+    border: 1px solid $ct-gray-lines;
+    border-radius: 5px;
+
+    .email__input {
+        margin: 22px 0 24px;
+    }
+}
+
+.recept-pop,
+.reklama,
+.add-block {
+    margin-top: 40px;
+    border: 1px solid $ct-gray-lines;
+    border-radius: 5px;
+
+    &__header {
+        padding: 20px;
+        background: $ct-light-gray;
+        border-bottom: 1px solid $ct-gray-lines;
+    }
+
+    &__list {
+        list-style-type: none;
+    }
+
+    &__item {
+        padding: 22px;
+    }
+
+    &__item:not(:last-child) {
+        border-bottom: 1px solid $ct-gray-lines;
+    }
+
+    &__body {
+        padding: 24px 0;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 248px;
+        height: 400px;
+        margin: 0 auto;
+        border: 1px solid $ct-gray-lines;
+        border-radius: 5px;
+
+        span {
+            font-family: $font-family-roboto;
+            font-size: 18px;
+            line-height: 100%;
+            color: $ct-black;
+        }
+    }
+}
+
+.recept-min {
+    display: flex;
+    justify-content: space-between;
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        padding: 12px 0;
+    }
+
+    &__title {
+        margin: 0;
+        font-family: $font-family-roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 100%;
+        color: $ct-black;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
+
+        span {
+            margin-left: 4px;
+            font-family: $font-family-roboto;
+            font-size: 14px;
+            line-height: 100%;
+            color: $ct-semi-black;
+        }
+    }
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+    }
+
+    &__item:not(:first-child) {
+        margin-left: 16px;
+    }
+
+    svg {
+        display: inline-block;
+        vertical-align: middle;
+        @include svg(16px, 14px, $ct-orange);
+    }
+
+    &__img {
+        min-width: 84px;
+        margin-left: 40px;
+
+        img {
+            @include img;
+        }
+    }
+}
+
+.add-block {
+    height: 468px;
 }

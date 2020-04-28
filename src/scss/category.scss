@@ -1,16 +1,21 @@
 /*=============================================
         СТРАНИЦА КАТЕГОРИИ
 =============================================*/
-.content-inner {
+.category-main {
     background: $cf-white;
+}
+
+.content-inner {
     display: flex;
     flex-wrap: nowrap;
+    align-items: flex-start;
 }
 
 .category-recept {
+    padding: 56px 0;
 
     &__desc {
-        margin-top: 32px;
+        margin-top: 36px;
         font-family: $font-family-roboto;
         font-weight: normal;
         font-size: 20px;
@@ -19,15 +24,137 @@
     }
 
     &__list {
-        margin-top: 60px;
+        margin-top: 50px;
         list-style-type: none;
     }
 
     &__item {
         padding: 40px 0;
+        border-bottom: 1px solid $ct-gray-lines;
+    }
+
+    &__item:last-child {
+        border-bottom: none;
     }
 }
 
 .recept-cat {
     display: flex;
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text {
+        margin-top: 26px;
+        font-family: $font-family-roboto;
+        font-size: 16px;
+        line-height: 132.19%;
+        color: $ct-semi-black;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
+
+        span {
+            margin-left: 4px;
+            font-family: $font-family-roboto;
+            font-size: 16px;
+            line-height: 100%;
+            color: $ct-semi-black;
+        }
+    }
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+    }
+
+    &__item {
+        margin-left: 16px;
+    }
+
+    svg {
+        display: inline-block;
+        vertical-align: middle;
+        @include svg(24px, 16px, $ct-orange);
+    }
+
+    &__img {
+        min-width: 360px;
+        margin-left: 40px;
+
+        img {
+            @include img;
+        }
+    }
+}
+
+.pagination {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $ct-gray-lines;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color ease-in 0.2s;
+
+        &.active,
+        &:hover {
+            background-color: $ct-orange;
+
+            a {
+                color: $ct-light-gray;
+            }
+
+            svg {
+                stroke: $ct-light-gray;
+            }
+        }
+    }
+
+    &__link {
+        font-family: $font-family-roboto;
+        font-size: 24px;
+        line-height: 28px;
+        color: $ct-semi-black;
+        transition: color ease-in 0.2s;
+
+        svg {
+            @include svg (8px, 18px, transparent);
+            stroke: $ct-semi-black;
+            stroke-width: 3px;
+        }
+    }
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 0;
+    width: 728px;
+    height: 90px;
+    border: 1px solid $ct-dark-gray;
+    border-radius: 5px;
+
+    span {
+        font-family: $font-family-roboto;
+        font-size: 18px;
+        line-height: 100%;
+        color: $ct-black;
+    }
 }
