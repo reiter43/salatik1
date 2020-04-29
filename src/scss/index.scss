@@ -494,8 +494,8 @@
         background-color: $cf-light-gray;
         font-size: 18px;
         color: $ct-black;
-        cursor: pointer;
         transition: background-color 0.1s;
+        cursor: pointer;
 
         @include s-block {
             width: 100%;
@@ -506,7 +506,7 @@
         }
 
         &.active {
-            background-color: darken($cf-light-gray, 5%)
+            background-color: darken($cf-light-gray, 5%);
         }
 
         svg {

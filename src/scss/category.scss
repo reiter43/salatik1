@@ -14,23 +14,55 @@
 .category-recept {
     padding: 56px 0;
 
+    @include md-block {
+        min-width: 472px;
+        padding: 32px 0 64px;
+    }
+
+    @include s-block {
+        min-width: 200px;
+        padding: 24px 0 40px;
+    }
+
     &__desc {
         margin-top: 36px;
         font-family: $font-family-roboto;
-        font-weight: normal;
         font-size: 20px;
         line-height: 132.19%;
+        font-weight: 400;
         color: $ct-semi-black;
+
+        @include md-block {
+            margin-top: 28px;
+            font-size: 14px;
+        }
+
+        @include s-block {
+            margin-top: 16px;
+            color: $ct-black;
+        }
     }
 
     &__list {
         margin-top: 50px;
         list-style-type: none;
+
+        @include s-block {
+            margin-top: 10px;
+        }
     }
 
     &__item {
         padding: 40px 0;
         border-bottom: 1px solid $ct-gray-lines;
+
+        @include md-block {
+            padding: 32px 0;
+        }
+
+        &--s {
+            display: none;
+        }
     }
 
     &__item:last-child {
@@ -40,6 +72,10 @@
 
 .recept-cat {
     display: flex;
+
+    @include s-block {
+        flex-direction: column;
+    }
 
     &__desc {
         display: flex;
@@ -52,6 +88,20 @@
         font-size: 16px;
         line-height: 132.19%;
         color: $ct-semi-black;
+
+        @include lg-block {
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        @include md-block {
+            margin-top: 12px;
+            font-size: 12px;
+        }
+
+        @include s-block {
+            margin-bottom: 16px;
+        }
     }
 
     &__footer {
@@ -65,17 +115,30 @@
             font-size: 16px;
             line-height: 100%;
             color: $ct-semi-black;
+
+            @include lg-block {
+                margin-left: 0;
+                font-size: 14px;
+            }
+
+            @include md-block {
+                font-size: 12px;
+            }
         }
     }
 
     &__list {
         display: flex;
-        list-style-type: none;
         align-items: center;
+        list-style-type: none;
     }
 
     &__item {
         margin-left: 16px;
+
+        @include lg-block {
+            margin-left: 12px;
+        }
     }
 
     svg {
@@ -88,29 +151,50 @@
         min-width: 360px;
         margin-left: 40px;
 
+        @include lg-block {
+            min-width: 275px;
+            margin-left: 20px;
+        }
+
+        @include md-block {
+            min-width: 210px;
+        }
+
+        @include s-block {
+            order: -1;
+            width: 100%;
+            margin-bottom: 16px;
+            margin-left: 0;
+        }
+
         img {
             @include img;
+            height: 100%;
         }
     }
 }
 
 .pagination {
-    margin-top: 70px;
     display: flex;
     justify-content: center;
+    margin-top: 70px;
     list-style-type: none;
+
+    @include md-block {
+        margin-top: 38px;
+    }
 
     &__item {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-right: 10px;
         width: 50px;
         height: 50px;
+        margin-right: 10px;
         border: 1px solid $ct-gray-lines;
         border-radius: 5px;
-        cursor: pointer;
         transition: background-color ease-in 0.2s;
+        cursor: pointer;
 
         &.active,
         &:hover {
@@ -124,6 +208,11 @@
                 stroke: $ct-light-gray;
             }
         }
+
+        @include md-block {
+            width: 32px;
+            height: 32px;
+        }
     }
 
     &__link {
@@ -132,6 +221,11 @@
         line-height: 28px;
         color: $ct-semi-black;
         transition: color ease-in 0.2s;
+
+        @include md-block {
+            font-size: 15px;
+            line-height: 18px;
+        }
 
         svg {
             @include svg (8px, 18px, transparent);
@@ -145,11 +239,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px auto 0;
     width: 728px;
     height: 90px;
+    margin: 50px auto 0;
     border: 1px solid $ct-dark-gray;
     border-radius: 5px;
+
+    @include lg-block {
+        display: none;
+    }
 
     span {
         font-family: $font-family-roboto;

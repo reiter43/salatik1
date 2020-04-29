@@ -105,6 +105,13 @@
     &--suscribe {
         width: 100%;
         font-size: 14px;
+
+        @include md-block {
+            min-width: 120px;
+            padding: 12px 20px;
+            
+            font-size: 10px;
+        }
     }
 
     &--suscribe-footer {
@@ -203,10 +210,19 @@
 .title-page {
     margin: 0;
     font-family: $font-family-days;
-    font-weight: normal;
     font-size: 48px;
-    line-height: 100.79%;
+    line-height: 100%;
+    font-weight: 400;
     color: $ct-black;
+
+    @include md-block {
+        font-size: 42px;
+    }
+
+    @include s-block {
+        font-size: 28px;
+        line-height: 36px;
+    }
 }
 
 .title-section {
@@ -260,6 +276,26 @@
     @include xs-block {
         font-size: 13px;
     }
+
+    &--cat {
+        @include lg-block {
+            font-size: 20px;
+        }
+
+        @include md-block {
+            font-size: 14px;
+            line-height: 100%;
+        }
+
+        @include s-block {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @include xs-block {
+            font-size: 16px;
+        }
+    }
 }
 
 .title-sub {
@@ -270,6 +306,11 @@
     line-height: 23px;
     font-weight: 500;
     color: $ct-black;
+
+    @include md-block {
+        font-size: 12px;
+        line-height: 14px;
+    }
 }
 
 /*------------------------------------------------*/
@@ -359,6 +400,7 @@
         }
     }
 }
+
 /*------------------------------------------------*/
 
 /*---------------------------------------------
@@ -366,15 +408,33 @@
 ---------------------------------------------*/
 
 .aside {
-    min-width: 340px;
+    width: 100%;
+    max-width: 340px;
     margin-left: 80px;
     padding-top: 32px;
+
+    @include lg-block {
+        max-width: 280px;
+        margin-left: 56px;
+    }
+
+    @include lg-block {
+        margin-left: 48px;
+    }
+
+    @include sm-block {
+        display: none;
+    }
 }
 
 .form-suscribe {
     padding: 21px 32px 32px;
     border: 1px solid $ct-gray-lines;
     border-radius: 5px;
+
+    @include md-block {
+        padding: 16px;
+    }
 
     .email__input {
         margin: 22px 0 24px;
@@ -390,8 +450,8 @@
 
     &__header {
         padding: 20px;
-        background: $ct-light-gray;
         border-bottom: 1px solid $ct-gray-lines;
+        background: $ct-light-gray;
     }
 
     &__list {
@@ -400,6 +460,10 @@
 
     &__item {
         padding: 22px;
+
+        @include md-block {
+            padding: 15px 12px;
+        }
     }
 
     &__item:not(:last-child) {
@@ -408,17 +472,25 @@
 
     &__body {
         padding: 24px 0;
+
+        @include md-block {
+            height: 276px;
+        }
     }
 
     &__block {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 248px;
+        max-width: 248px;
         height: 400px;
         margin: 0 auto;
         border: 1px solid $ct-gray-lines;
         border-radius: 5px;
+
+        @include md-block {
+            display: none;
+        }
 
         span {
             font-family: $font-family-roboto;
@@ -437,16 +509,28 @@
         display: flex;
         flex-direction: column;
         padding: 12px 0;
+
+        @include md-block {
+            padding: 10px 0 0;
+        }
     }
 
     &__title {
         margin: 0;
         font-family: $font-family-roboto;
-        font-style: normal;
-        font-weight: normal;
         font-size: 16px;
         line-height: 100%;
+        font-weight: 400;
+        font-style: normal;
         color: $ct-black;
+
+        @include llg-block {
+            font-size: 14px;
+        }
+
+        @include md-block {
+            font-size: 10px;
+        }
     }
 
     &__footer {
@@ -460,28 +544,59 @@
             font-size: 14px;
             line-height: 100%;
             color: $ct-semi-black;
+
+            @include llg-block {
+                margin-left: 0;
+            }
+
+            @include md-block {
+                margin-left: -2px;
+                font-size: 10px;
+            }
         }
     }
 
     &__list {
         display: flex;
-        list-style-type: none;
         align-items: center;
+        list-style-type: none;
     }
 
     &__item:not(:first-child) {
         margin-left: 16px;
+
+        @include llg-block {
+            margin-left: 12px;
+        }
+
+        // @include md-block {
+        //     margin-left: 10px;
+        // }
     }
 
     svg {
         display: inline-block;
         vertical-align: middle;
         @include svg(16px, 14px, $ct-orange);
+
+        @include md-block {
+            @include svg(12px, 10px, $ct-orange);
+        }
     }
 
     &__img {
-        min-width: 84px;
-        margin-left: 40px;
+        max-width: 84px;
+        margin-left: 20px;
+
+        @include llg-block {
+            max-width: 70px;
+            margin-left: 10px;
+        }
+
+        @include md-block {
+            max-width: 48px;
+            margin-left: 10px;
+        }
 
         img {
             @include img;
