@@ -1,29 +1,7 @@
 /*=============================================
         СТРАНИЦА КАТЕГОРИИ
 =============================================*/
-.category-main {
-    background: $cf-white;
-}
-
-.content-inner {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-}
-
 .category-recept {
-    padding: 56px 0;
-
-    @include md-block {
-        min-width: 472px;
-        padding: 32px 0 64px;
-    }
-
-    @include s-block {
-        min-width: 200px;
-        padding: 24px 0 40px;
-    }
-
     &__desc {
         margin-top: 36px;
         font-family: $font-family-roboto;
@@ -56,12 +34,19 @@
         padding: 40px 0;
         border-bottom: 1px solid $ct-gray-lines;
 
+        &>a {
+            display: block;
+        }
+
         @include md-block {
             padding: 32px 0;
         }
 
         &--s {
-            display: none;
+
+            @include s-block {
+                display: none;
+            }
         }
     }
 
@@ -174,66 +159,6 @@
     }
 }
 
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-    list-style-type: none;
-
-    @include md-block {
-        margin-top: 38px;
-    }
-
-    &__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        margin-right: 10px;
-        border: 1px solid $ct-gray-lines;
-        border-radius: 5px;
-        transition: background-color ease-in 0.2s;
-        cursor: pointer;
-
-        &.active,
-        &:hover {
-            background-color: $ct-orange;
-
-            a {
-                color: $ct-light-gray;
-            }
-
-            svg {
-                stroke: $ct-light-gray;
-            }
-        }
-
-        @include md-block {
-            width: 32px;
-            height: 32px;
-        }
-    }
-
-    &__link {
-        font-family: $font-family-roboto;
-        font-size: 24px;
-        line-height: 28px;
-        color: $ct-semi-black;
-        transition: color ease-in 0.2s;
-
-        @include md-block {
-            font-size: 15px;
-            line-height: 18px;
-        }
-
-        svg {
-            @include svg (8px, 18px, transparent);
-            stroke: $ct-semi-black;
-            stroke-width: 3px;
-        }
-    }
-}
 
 .banner {
     display: flex;

@@ -1,0 +1,24 @@
+.page-inner {
+    background: $cf-white;
+}
+
+.content-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+.main-inner {
+    padding: 56px 0;
+
+    @include md-block {
+        min-width: 472px;
+        padding: 32px 0 64px;
+    }
+
+    @include s-block {
+        min-width: 200px;
+        padding: 24px 0 40px;
+    }
+
+}

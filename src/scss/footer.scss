@@ -377,9 +377,6 @@
     }
 
     &__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 40px;
         height: 40px;
         border-radius: 3px;
@@ -397,7 +394,9 @@
 
     &__link {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
         list-style-type: none;
 
         svg {
