@@ -51,6 +51,7 @@
             margin-bottom: 24px;
             text-align: center;
         }
+
         @include xs-block {
             text-align: left;
         }
@@ -150,6 +151,7 @@
             width: 70%;
             margin: 18px auto;
         }
+
         @include xs-block {
             width: 100%;
         }
@@ -179,6 +181,7 @@
         }
 
         @include sm-block {
+            padding: 10px 12px;
             font-size: 12px;
         }
 
@@ -241,6 +244,11 @@
         width: 10px;
         height: 10px;
         border-radius: 2px;
+        margin-right: 6px;
+    }
+
+    @include xs-block {
+        top: 1px;
     }
 
     &::after {
@@ -262,6 +270,13 @@
             height: 3px;
             border-left: 1px solid;
             border-bottom: 1px solid;
+        }
+
+        @include xs-block {
+            top: 2px;
+            left: 1px;
+            width: 6px;
+            height: 2px;
         }
     }
 }

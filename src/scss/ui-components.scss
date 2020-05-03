@@ -109,7 +109,6 @@
         @include md-block {
             min-width: 120px;
             padding: 12px 20px;
-            
             font-size: 10px;
         }
     }
@@ -120,12 +119,11 @@
         font-size: 18px;
 
         @include md-block {
-            padding: 7px 58px;
+            padding: 12px 58px 10px;
             font-size: 10px;
         }
 
         @include sm-block {
-            padding-top: 8px;
             font-size: 12px;
         }
     }
