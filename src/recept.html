@@ -1,0 +1,516 @@
+@include('./components/header.html', {"title": "Рецепт......."})
+
+<div class="page-inner">
+    <div class="wrapper">
+        <div class="content-inner">
+            <main class="main-inner page-recept">
+                <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="/" class="breadcrumbs__link">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="./category.html" class="breadcrumbs__link">Салаты овощные</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link " aria-current="true">Салат с рукколой</a>
+                        </li>
+                    </ol>
+                </nav>
+
+                <section class="page-recept__recept">
+                    <div class="page-recept__img-block">
+                        <picture>
+                            <img src="img/images/recept-page.jpg" alt="Тарелка с салатом">
+                        </picture>
+                        <div class="page-recept__metrics">
+                            <ul class="page-recept__metrics-list">
+                                <li class="page-recept__metrics-item">
+                                    <svg aria-hidden="true" focusable="false">
+                                        <use xlink:href="img/svg/sprite.svg#user"></use>
+                                    </svg>
+                                    <span>Никнэйм</span>
+                                </li>
+                                <li class="page-recept__metrics-item">
+                                    <svg aria-hidden="true" focusable="false">
+                                        <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                                    </svg>
+                                    <span>01.12.2019</span>
+                                </li>
+                                <li class="page-recept__metrics-item">
+                                    <svg aria-hidden="true" focusable="false">
+                                        <use xlink:href="img/svg/sprite.svg#comments"></use>
+                                    </svg>
+                                    <span>22</span>
+                                </li>
+                                <li class="page-recept__metrics-item">
+                                    <svg aria-hidden="true" focusable="false">
+                                        <use xlink:href="img/svg/sprite.svg#see"></use>
+                                    </svg>
+                                    <span>22</span>
+                                </li>
+                                <li class="page-recept__metrics-item">
+                                    <ul class="page-recept__metrics-list">
+                                        <li class="page-recept__metrics-subitem">
+                                            <svg class="active" role="img" focusable="false" aria-current="true">
+                                                <title>Рейтинг 1</title>
+                                                <use xlink:href="img/svg/sprite.svg#star" aria-hidden="true"></use>
+                                            </svg>
+                                        </li>
+                                        <li class="page-recept__metrics-subitem">
+                                            <svg class="active" role="img" focusable="false" aria-current="true"> 
+                                                <title>Рейтинг 2</title>
+                                                <use xlink:href="img/svg/sprite.svg#star" aria-hidden="true"></use>
+                                            </svg>
+                                        </li>
+                                        <li class="page-recept__metrics-subitem">
+                                            <svg class="active" role="img" focusable="false" aria-current="true">
+                                                <title>Рейтинг 3</title>
+                                                <use xlink:href="img/svg/sprite.svg#star" aria-hidden="true"></use>
+                                            </svg>
+                                        </li>
+                                        <li class="page-recept__metrics-subitem">
+                                            <svg class="active" role="img" focusable="false" aria-current="true">
+                                                <title>Рейтинг 4</title>
+                                                <use xlink:href="img/svg/sprite.svg#star" aria-hidden="true"></use>
+                                            </svg>
+                                        </li>
+                                        <li class="page-recept__metrics-subitem">
+                                            <svg role="img" focusable="false">
+                                                <title>Рейтинг 5</title>
+                                                <use xlink:href="img/svg/sprite.svg#star" aria-hidden="true"></use>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn-icon btn-icon--img-block page-recept__metrics-btn">
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="img/svg/sprite.svg#heart-2"></use>
+                                </svg>
+                                <span>В закладки</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="page-recept__header">
+                        <h3 class="title-section page-recept__title">Салат с рукколой</h3>
+                        <div class="page-recept__time">
+                            <svg role="img" focusable="false">
+                                <title>Время приготовления</title>
+                                <use xlink:href="img/svg/sprite.svg#time" aria-hidden="true"></use>
+                            </svg>
+                            <h6 class="title-sub">20 минут</h6>
+                        </div>
+                    </div>
+
+                    <div class="page-recept__desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum cursus lorem a leo imperdiet, ac dignissim
+                    </div>
+
+                    <div class="page-recept__structure">
+                        <div class="page-recept__structure-group">
+                            <h5 class="page-recept__structure-title">
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="img/svg/sprite.svg#ingr"></use>
+                                </svg>
+                                Ингридиенты:
+                            </h5>
+                            <ul class="page-recept__structure-list">
+                                <li class="page-recept__structure-item"><span>Руккола</span><span>100г</span> </li>
+                                <li class="page-recept__structure-item"><span>Томаты черри</span><span>50г</span> </li>
+                                <li class="page-recept__structure-item"><span>Оливковое масло</span><span>2ст.л.</span> </li>
+                                <li class="page-recept__structure-item"><span>Болгарский перец</span><span>1шт</span> </li>
+                                <li class="page-recept__structure-item"><span>Сыр рикотта</span><span>50г</span> </li>
+                            </ul>
+                        </div>
+                        <div class="page-recept__structure-group">
+                            <h5 class="page-recept__structure-title">
+                                Калорийность
+                            </h5>
+                            <ul class="page-recept__structure-list">
+                                <li class="page-recept__structure-item"><span>Белки</span><span>10г</span> </li>
+                                <li class="page-recept__structure-item"><span>Жиры</span><span>15г</span> </li>
+                                <li class="page-recept__structure-item"><span>Углеводы</span><span>30г.</span> </li>
+                                <li class="page-recept__structure-item"><span>Калории</span><span>300кКал</span> </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="page-recept__stages">
+                        <h4 class="title-section-inner">Этапы приготовления:</h4>
+                        <ul class="page-recept__stages-list">
+                            <li>
+                                <figure class="page-recept__stages-item">
+                                    <div class="page-recept__stages-img">
+                                        <picture><img src="img/images/recept-stage-1.jpg" alt="Порезаные овощи"></picture>
+                                    </div>
+                                    <figcaption class="page-recept__stages-desc">1. Нарезать томаты черри...</figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="page-recept__stages-item">
+                                    <div class="page-recept__stages-img">
+                                        <picture><img src="img/images/recept-stage-1.jpg" alt="Порезаные овощи"></picture>
+                                    </div>
+                                    <figcaption class="page-recept__stages-desc">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus.</figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="page-recept__stages-item">
+                                    <div class="page-recept__stages-img">
+                                        <picture><img src="img/images/recept-stage-1.jpg" alt="Порезаные овощи"></picture>
+                                    </div>
+                                    <figcaption class="page-recept__stages-desc">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus.</figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <div class="banner">
+                    <span>728x90</span>
+                </div>
+
+                <section class="page-recept__socials-block">
+                    <div class="page-recept__socials">
+                        <div class="socials">
+                            <h6 class="title-sub page-recept__title-sub-socials">
+                                Поделиться в социальных сетях:
+                            </h6>
+                            <ul class="socials__list">
+                                <li class="socials__item" style="background: #4680C2">
+                                    <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="img/svg/sprite.svg#vk"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="socials__item" style="background: #3B5998">
+                                    <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="img/svg/sprite.svg#fb"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="socials__item" style="background: linear-gradient(49.12deg, #FFDD55 6.62%, #FF543E 32.09%, #D62976 53.83%, #C837AB 71.22%, #4F5BD5 90.92%)">
+                                    <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="img/svg/sprite.svg#inst"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="socials__item" style="background: #DC4E41">
+                                    <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="img/svg/sprite.svg#google+"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="socials__item" style="background:#4CAF50">
+                                    <a href="#" class="socials__link socials__link--ws" aria-label="Ссылка на профиль">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="img/svg/sprite.svg#whatsap"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="socials__item" style="background: #7F40BD">
+                                    <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="img/svg/sprite.svg#viber"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="socials__item" style="background: #30B0E1">
+                                    <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="img/svg/sprite.svg#telegram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="socials__item" style="background:#ED812B">
+                                    <a href="#" class="socials__link" aria-label="Ссылка на профиль">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="img/svg/sprite.svg#odno"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page-recept__rating">
+                        <fieldset class="rating">
+                            <legend class="title-sub page-recept__title-sub-rating">Оценить рецепт</legend>
+                            <div class="rating__group">
+                                <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно">
+                                <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
+                                <input class="rating__star" type="radio" name="health" value="3" aria-label="Нормально">
+                                <input class="rating__star" type="radio" name="health" value="4" aria-label="Хорошо">
+                                <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
+                                <div class="rating__focus"></div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </section>
+
+                <section class="page-recept__similar-recept">
+                    <h4 class="title-section-inner">Похожие рецепты:</h4>
+                    <div class="page-recept__similar-recept-content">
+                        <figure class="recept recept--similar">
+                            <figcaption class="recept__desc">
+                                <h5 class="title-recept title-recept--similar">Бутерброд с сыром</h5>
+                                <p class="recept__slogan">Приготовь себе и близким интересный перекус</p>
+                                <div class="recept-footer recept-footer--similar">
+                                    <ul class="recept-footer__list">
+                                        <li class="recept-footer__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество лайков</title>
+                                                <use xlink:href="img/svg/sprite.svg#like" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>100</span>
+                                        </li>
+                                        <li class="recept-footer__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество комментариев</title>
+                                                <use xlink:href="img/svg/sprite.svg#comments" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>10</span>
+                                        </li>
+                                        <li class="recept-footer__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество просмотров</title>
+                                                <use xlink:href="img/svg/sprite.svg#see" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>10</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </figcaption>
+                            <div class="recept__img recept__img--similar">
+                                <picture>
+                                    <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.webp 1x, img/images/2x/recept-img-1-576-2x.webp 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.jpg 1x, img/images/2x/recept-img-1-576-2x.jpg 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x">
+                                    <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.webp 1x, img/images/2x/recept-img-1-996-2x.webp 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.jpg 1x, img/images/2x/recept-img-1-996-2x.jpg 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x">
+                                    <source data-srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" srcset="http://placehold.it/156x168/f4f4f4.png&text=loading... 1x, http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <img class="lazyload" data-src="img/images/recept-img-1.jpg" data-srcset="img/images/2x/recept-img-1-2x.jpg 2x" src="http://placehold.it/156x168/f4f4f4.png&text=loading..." srcset="http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" alt="Салат с рукколой">
+                                </picture>
+                            </div>
+                        </figure>
+                        <figure class="recept recept--similar">
+                            <figcaption class="recept__desc">
+                                <h5 class="title-recept title-recept--similar">Салат с рукколой</h5>
+                                <p class="recept__slogan">Наслаждайся вкусным салатом каждый день</p>
+                                <div class="recept-footer recept-footer--similar">
+                                    <ul class="recept-footer__list">
+                                        <li class="recept-footer__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество лайков</title>
+                                                <use xlink:href="img/svg/sprite.svg#like" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>100</span>
+                                        </li>
+                                        <li class="recept-footer__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество комментариев</title>
+                                                <use xlink:href="img/svg/sprite.svg#comments" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>10</span>
+                                        </li>
+                                        <li class="recept-footer__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество просмотров</title>
+                                                <use xlink:href="img/svg/sprite.svg#see" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>10</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </figcaption>
+                            <div class="recept__img recept__img--similar">
+                                <picture>
+                                    <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.webp 1x, img/images/2x/recept-img-1-576-2x.webp 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.jpg 1x, img/images/2x/recept-img-1-576-2x.jpg 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x">
+                                    <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.webp 1x, img/images/2x/recept-img-1-996-2x.webp 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.jpg 1x, img/images/2x/recept-img-1-996-2x.jpg 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x">
+                                    <source data-srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" srcset="http://placehold.it/156x168/f4f4f4.png&text=loading... 1x, http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <img class="lazyload" data-src="img/images/recept-img-1.jpg" data-srcset="img/images/2x/recept-img-1-2x.jpg 2x" src="http://placehold.it/156x168/f4f4f4.png&text=loading..." srcset="http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" alt="Салат с рукколой">
+                                </picture>
+                            </div>
+                        </figure>
+                        <figure class="recept recept--similar">
+                            <figcaption class="recept__desc">
+                                <h5 class="title-recept title-recept--similar">Бутерброд с сыром</h5>
+                                <p class="recept__slogan">Приготовь себе и близким интересный перекус</p>
+                                <div class="recept-footer recept-footer--similar">
+                                    <ul class="recept-footer__list">
+                                        <li class="recept-footer__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество лайков</title>
+                                                <use xlink:href="img/svg/sprite.svg#like" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>100</span>
+                                        </li>
+                                        <li class="recept-footer__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество комментариев</title>
+                                                <use xlink:href="img/svg/sprite.svg#comments" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>10</span>
+                                        </li>
+                                        <li class="recept-footer__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество просмотров</title>
+                                                <use xlink:href="img/svg/sprite.svg#see" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>10</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </figcaption>
+                            <div class="recept__img recept__img--similar">
+                                <picture>
+                                    <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.webp 1x, img/images/2x/recept-img-1-576-2x.webp 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.jpg 1x, img/images/2x/recept-img-1-576-2x.jpg 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x">
+                                    <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.webp 1x, img/images/2x/recept-img-1-996-2x.webp 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.jpg 1x, img/images/2x/recept-img-1-996-2x.jpg 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x">
+                                    <source data-srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" srcset="http://placehold.it/156x168/f4f4f4.png&text=loading... 1x, http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <img class="lazyload" data-src="img/images/recept-img-1.jpg" data-srcset="img/images/2x/recept-img-1-2x.jpg 2x" src="http://placehold.it/156x168/f4f4f4.png&text=loading..." srcset="http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" alt="Салат с рукколой">
+                                </picture>
+                            </div>
+                        </figure>
+                        <figure class="recept recept--similar">
+                            <figcaption class="recept__desc">
+                                <h5 class="title-recept title-recept--similar">Салат с рукколой</h5>
+                                <p class="recept__slogan">Наслаждайся вкусным салатом каждый день</p>
+                                <div class="recept-footer recept-footer--similar">
+                                    <ul class="recept-footer__list">
+                                        <li class="recept-footer__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество лайков</title>
+                                                <use xlink:href="img/svg/sprite.svg#like" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>100</span>
+                                        </li>
+                                        <li class="recept-footer__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество комментариев</title>
+                                                <use xlink:href="img/svg/sprite.svg#comments" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>10</span>
+                                        </li>
+                                        <li class="recept-footer__item">
+                                            <svg role="img" focusable="false">
+                                                <title>Количество просмотров</title>
+                                                <use xlink:href="img/svg/sprite.svg#see" aria-hidden="true"></use>
+                                            </svg>
+                                            <span>10</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </figcaption>
+                            <div class="recept__img recept__img--similar">
+                                <picture>
+                                    <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.webp 1x, img/images/2x/recept-img-1-576-2x.webp 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <source media="(max-width: 576px)" data-srcset="img/images/recept-img-1-576.jpg 1x, img/images/2x/recept-img-1-576-2x.jpg 2x" srcset="http://placehold.it/116/f4f4f4.png&text=loading... 1x, http://placehold.it/232/f4f4f4.png&text=loading... 2x">
+                                    <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.webp 1x, img/images/2x/recept-img-1-996-2x.webp 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <source media="(max-width: 1200px)" data-srcset="img/images/recept-img-1-996.jpg 1x, img/images/2x/recept-img-1-996-2x.jpg 2x" srcset="http://placehold.it/90x98/f4f4f4.png&text=loading... 1x, http://placehold.it/180x196/f4f4f4.png&text=loading... 2x">
+                                    <source data-srcset="img/images/recept-img-1.webp 1x, img/images/2x/recept-img-1-2x.webp 2x" srcset="http://placehold.it/156x168/f4f4f4.png&text=loading... 1x, http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <img class="lazyload" data-src="img/images/recept-img-1.jpg" data-srcset="img/images/2x/recept-img-1-2x.jpg 2x" src="http://placehold.it/156x168/f4f4f4.png&text=loading..." srcset="http://placehold.it/312x336/f4f4f4.png&text=loading... 2x" alt="Салат с рукколой">
+                                </picture>
+                            </div>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="comments">
+                    <form class="form-comments" aria-labelledby="form-comments__title">
+                        <h4 class="title-section-inner" id="form-comments__title">Добавить комментарий</h4>
+
+                        <!-- Hidden Required Fields -->
+                        <input type="hidden" name="project_name" value="http://f0315577.xsph.ru/salatik">
+                        <input type="hidden" name="admin_email" value="43reiter@gmail.com">
+                        <input type="hidden" name="form_subject" value="Сайт SALATIK. Комментарий со страницы рецепта">
+                        <!-- END Hidden Required Fields -->
+
+                        <label class="name form-comments__name" hidden>
+                            <span class="visually-hidden">Введите Имя или никнейм(обязательное поле)</span>
+                            <input class="name__input  name__input--comments" type="text" name="name" placeholder="Имя или никнейм" required="required">
+                        </label>
+
+                        <label class="email" hidden>
+                            <span class="visually-hidden">Введите email(обязательное поле)</span>
+                            <input class="email__input  email__input--comments" type="email" name="email" placeholder="Введите ваш email" required="required">
+                        </label>
+
+                        <label class="textarea-comments">
+                            <span class="visually-hidden">Введите текст комментария(обязательное поле)</span>
+                            <textarea class="textarea-comments__input" name="Комментарий" placeholder="Введите текст комментария" required></textarea>
+                        </label>
+
+                        <div class="smails">
+                            <div class="smails__group">
+                                <button class="btn-smile" type="button" aria-label="Смайл"></button>
+                                <button class="btn-smile" type="button" aria-label="Смайл"></button>
+                                <button class="btn-smile" type="button" aria-label="Смайл"></button>
+                                <button class="btn-smile" type="button" aria-label="Смайл"></button>
+                                <button class="btn-smile" type="button" aria-label="Смайл"></button>
+                                <button class="btn-smile" type="button" aria-label="Смайл"></button>
+                                <button class="btn-smile" type="button" aria-label="Смайл"></button>
+                                <button class="btn-smile" type="button" aria-label="Смайл"></button>
+                                <button class="btn-smile" type="button" aria-label="Смайл"></button>
+                                <button class="btn-smile" type="button" aria-label="Смайл"></button>
+                                <button class="btn-smile" type="button" aria-label="Смайл"></button>
+                            </div>
+                            <button class="btn-submit" type="submit">Отправить</button>
+                        </div>
+
+                        <label class="checkbox-footer" hidden>
+                            <input class="checkbox-footer__input" type="checkbox" name="Обработка данных" aria-checked="false">
+                            <span class="checkbox-footer__fake"></span>
+                            Согласие на обработку персональных данных
+                        </label>
+                    </form>
+
+                    <div class="comments__tree">
+                        <div class="comments-card">
+                            <figure class="comments-card__body">
+                                <picture>
+                                    <source data-srcset="img/images/admin.webp 1x, img/images/2x/admin-2x.webp 2x" srcset="http://placehold.it/50x50/f4f4f4.png&text=loading... 1x, http://placehold.it/100x100/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <img class="lazyload" data-src="img/images/admin.png" data-srcset="img/images/2x/admin-2x.png 2x" src="http://placehold.it/50/f4f4f4.png&text=loading..." srcset="http://placehold.it/100/f4f4f4.png&text=loading... 2x" alt="Аватар пользователя">
+                                </picture>
+                                <figcaption class="comments-card__desc">
+                                    <p class="comments-card__name">Админ</p>
+                                    <time class="comments-card__date" datetime="2019-12-03">03.12.19</time>
+                                    <p class="comments-card__text">Текст комментария</p>
+                                </figcaption>
+                            </figure>
+                            <button class="btn-comments" type="button">Ответить</button>
+                        </div>
+                        <div class="comments-card comments-card--level2">
+                            <figure class="comments-card__body">
+                                <picture>
+                                    <source data-srcset="img/images/admin.webp 1x, img/images/2x/admin-2x.webp 2x" srcset="http://placehold.it/50x50/f4f4f4.png&text=loading... 1x, http://placehold.it/100x100/f4f4f4.png&text=loading... 2x" type="image/webp">
+                                    <img class="lazyload" data-src="img/images/admin.png" data-srcset="img/images/2x/admin-2x.png 2x" src="http://placehold.it/50/f4f4f4.png&text=loading..." srcset="http://placehold.it/100/f4f4f4.png&text=loading... 2x" alt="Аватар пользователя">
+                                </picture>
+                                <figcaption class="comments-card__desc">
+                                    <p class="comments-card__name">Админ</p>
+                                    <time class="comments-card__date" datetime="2019-12-03">03.12.19</time>
+                                    <p class="comments-card__text">Текст комментария</p>
+                                </figcaption>
+                            </figure>
+                            <button class="btn-comments" type="button">Ответить</button>
+                        </div>
+                    </div>
+                </section>
+
+                @include('./components/pagination.html')
+            </main>
+
+            @include('./components/aside.html')
+        </div>
+    </div>
+</div>
+
+
+@include('./components/footer.html')

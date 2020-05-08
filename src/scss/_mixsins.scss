@@ -235,7 +235,6 @@
 @mixin content-footer {
     font-family: $font-family-roboto;
     font-size: 16px;
-    line-height: 100%;
     color: $ct-dark-gray;
 
     @include lg-block {
@@ -249,6 +248,21 @@
     @include sm-block {
         font-size: 12px;
     }
+}
+
+@mixin textarea {
+    display: inline-block;
+    font-family: $font-family-roboto;
+    font-size: 20px;
+    line-height: 24px;
+    color: $ct-semi-black;
+}
+
+// Неактивная ссылка
+@mixin disa {
+    color: #999;
+    pointer-events: none;
+    cursor: default;
 }
 
 //Адаптивность картинки

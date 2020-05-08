@@ -158,7 +158,8 @@
     }
 }
 
-.email {
+.email,
+.name {
     &__input {
         width: 100%;
         padding: 12px 16px;
@@ -199,6 +200,25 @@
 
         &:-ms-input-placeholder {
             @include content-footer;
+        }
+
+        &--comments {
+            font-size: 20px;
+            &::-webkit-input-placeholder {
+                @include textarea;
+            }
+    
+            &:-moz-placeholder {
+                @include textarea;
+            }
+    
+            &::-moz-placeholder {
+                @include textarea;
+            }
+    
+            &:-ms-input-placeholder {
+                @include textarea;
+            }
         }
     }
 }
@@ -243,8 +263,8 @@
         top: 2px;
         width: 10px;
         height: 10px;
-        border-radius: 2px;
         margin-right: 6px;
+        border-radius: 2px;
     }
 
     @include xs-block {

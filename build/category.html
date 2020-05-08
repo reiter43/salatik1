@@ -48,7 +48,7 @@
                 </form>
 
                 <nav class="nav-site" id="nav-site" aria-label="Навигация по сайту">
-                    <ul class="nav-site__list" aria-label="Навигация по сайту">
+                    <ul class="nav-site__list">
                         <li class="nav-site__item">
                             <a href="#" class="nav-site__link">Новости</a>
                         </li>
@@ -92,7 +92,7 @@
             <div class="wrapper">
                 <nav class="nav" aria-label="Навигация по контенту">
                     <nav class="nav-site--mob" id="nav-site--mob" aria-label="Навигация по сайту">
-                        <ul class="nav-site--mob__list" aria-label="Навигация по сайту">
+                        <ul class="nav-site--mob__list">
                             <li class="nav-site--mob__item">
                                 <a href="#" class="nav-site--mob__link">Новости</a>
                             </li>
@@ -218,7 +218,7 @@
                         <a href="recept.html">
                             <figure class="recept-cat">
                                 <figcaption class="recept-cat__desc">
-                                    <h5 class="title-recept title-recept--cat">Оливье</h5>
+                                    <h5 class="title-recept title-recept--cat">Салат с рукколой</h5>
                                     <p class="recept-cat__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor sapien, tincidunt rutrum fringilla nec, dictum eu ligula. Interdum et malesuada fames ac ante ipsum primis</p>
                                     <div class="recept-cat__footer">
                                         <div class="recept-cat__time">
@@ -498,33 +498,36 @@
                     </li>
                 </ul>
 
-                <ul class="pagination" aria-label="Пагинация рецептов">
-    <li class="pagination__item">
-        <a href="#" class="pagination__link">
-            <svg aria-hidden="true" focusable="false">
-                <use xlink:href="img/svg/sprite.svg#pagin-prev"></use>
+                <nav aria-label="Пагинация страниц категорий рецептов">
+    <ul class="pagination">
+        <li class="pagination__item">
+            <a href="#" class="pagination__link">
+                <svg aria-hidden="true" focusable="false">
+                    <use xlink:href="img/svg/sprite.svg#pagin-prev"></use>
+                </svg>
+                <span class=" visually-hidden">Предыдущая страница</span>
+            </a>
+        </li>
+        <li class="pagination__item active">
+            <a href="#" class="pagination__link" aria-current="true"><span class="visually-hidden">Страница</span>1</a>
+        </li>
+        <li class="pagination__item">
+            <a href="#" class="pagination__link"><span class="visually-hidden">Страница</span>2</a>
+        </li>
+        <li class="pagination__item">
+            <a href="#" class="pagination__link"><span class="visually-hidden">Страница</span>3</a>
+        </li>
+        <li class="pagination__item">
+            <a href="#" class="pagination__link">
+                <svg aria-hidden="true" focusable="false">
+                    <use xlink:href="img/svg/sprite.svg#pagin-next"></use>
             </svg>
-            <span class=" visually-hidden">Предыдущая страница</span>
-        </a>
-    </li>
-    <li class="pagination__item active">
-        <a href="#" class="pagination__link"><span class="visually-hidden">Страница</span>1</a>
-    </li>
-    <li class="pagination__item">
-        <a href="#" class="pagination__link"><span class="visually-hidden">Страница</span>2</a>
-    </li>
-    <li class="pagination__item">
-        <a href="#" class="pagination__link"><span class="visually-hidden">Страница</span>3</a>
-    </li>
-    <li class="pagination__item">
-        <a href="#" class="pagination__link">
-            <svg aria-hidden="true" focusable="false">
-                <use xlink:href="img/svg/sprite.svg#pagin-next"></use>
-        </svg>
-        <span class=" visually-hidden">Следующая страница</span>
-        </a>
-    </li>
-</ul>
+            <span class=" visually-hidden">Следующая страница</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
 
                 <div class="banner">
                     <span>728x90</span>
@@ -559,23 +562,23 @@
                 <figure class="recept-min">
                     <figcaption class="recept-min__desc">
                         <h6 class="recept-min__title">Бутерброд с сыром</h6>
-                        <div class="recept-min__footer">
-                            <ul class="recept-min__list">
-                                <li class="recept-min__item">
+                        <div class="recept-footer">
+                            <ul class="recept-footer__list">
+                                <li class="recept-footer__item">
                                     <svg role="img" focusable="false">
                                         <title>Количество лайков</title>
                                         <use xlink:href="img/svg/sprite.svg#like" aria-hidden="true"></use>
                                     </svg>
                                     <span>100</span>
                                 </li>
-                                <li class="recept-min__item">
+                                <li class="recept-footer__item">
                                     <svg role="img" focusable="false">
                                         <title>Количество комментариев</title>
                                         <use xlink:href="img/svg/sprite.svg#comments" aria-hidden="true"></use>
                                     </svg>
                                     <span>10</span>
                                 </li>
-                                <li class="recept-min__item">
+                                <li class="recept-footer__item">
                                     <svg role="img" focusable="false">
                                         <title>Количество просмотров</title>
                                         <use xlink:href="img/svg/sprite.svg#see" aria-hidden="true"></use>
@@ -594,23 +597,23 @@
                 <figure class="recept-min">
                     <figcaption class="recept-min__desc">
                         <h6 class="recept-min__title">Бутерброд с сыром</h6>
-                        <div class="recept-min__footer">
-                            <ul class="recept-min__list">
-                                <li class="recept-min__item">
+                        <div class="recept-footer">
+                            <ul class="recept-footer__list">
+                                <li class="recept-footer__item">
                                     <svg role="img" focusable="false">
                                         <title>Количество лайков</title>
                                         <use xlink:href="img/svg/sprite.svg#like" aria-hidden="true"></use>
                                     </svg>
                                     <span>100</span>
                                 </li>
-                                <li class="recept-min__item">
+                                <li class="recept-footer__item">
                                     <svg role="img" focusable="false">
                                         <title>Количество комментариев</title>
                                         <use xlink:href="img/svg/sprite.svg#comments" aria-hidden="true"></use>
                                     </svg>
                                     <span>10</span>
                                 </li>
-                                <li class="recept-min__item">
+                                <li class="recept-footer__item">
                                     <svg role="img" focusable="false">
                                         <title>Количество просмотров</title>
                                         <use xlink:href="img/svg/sprite.svg#see" aria-hidden="true"></use>
@@ -629,23 +632,23 @@
                 <figure class="recept-min">
                     <figcaption class="recept-min__desc">
                         <h6 class="recept-min__title">Бутерброд с сыром</h6>
-                        <div class="recept-min__footer">
-                            <ul class="recept-min__list">
-                                <li class="recept-min__item">
+                        <div class="recept-footer">
+                            <ul class="recept-footer__list">
+                                <li class="recept-footer__item">
                                     <svg role="img" focusable="false">
                                         <title>Количество лайков</title>
                                         <use xlink:href="img/svg/sprite.svg#like" aria-hidden="true"></use>
                                     </svg>
                                     <span>100</span>
                                 </li>
-                                <li class="recept-min__item">
+                                <li class="recept-footer__item">
                                     <svg role="img" focusable="false">
                                         <title>Количество комментариев</title>
                                         <use xlink:href="img/svg/sprite.svg#comments" aria-hidden="true"></use>
                                     </svg>
                                     <span>10</span>
                                 </li>
-                                <li class="recept-min__item">
+                                <li class="recept-footer__item">
                                     <svg role="img" focusable="false">
                                         <title>Количество просмотров</title>
                                         <use xlink:href="img/svg/sprite.svg#see" aria-hidden="true"></use>

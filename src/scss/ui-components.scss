@@ -66,6 +66,10 @@
         display: inline-block;
         vertical-align: middle;
     }
+
+    &--img-block {
+        padding: 0;
+    }
 }
 
 .btn-search {
@@ -83,7 +87,7 @@
 
 .btn-submit {
     min-width: 200px;
-    padding: 12px 58px;
+    padding: 12px 54px;
     text-align: center;
     border: none;
     border-radius: 5px;
@@ -200,6 +204,31 @@
     }
 }
 
+.btn-smile {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    vertical-align: middle;
+    border: none;
+    border-radius: 50%;
+    background: $ct-gray-lines;
+    appearance: none;
+}
+
+.btn-comments {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-family: $font-family-roboto;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: normal;
+    color: $ct-green;
+    appearance: none;
+}
+
 /*------------------------------------------------*/
 
 /*---------------------------------------------
@@ -256,6 +285,7 @@
     font-family: $font-family-days;
     font-size: 20px;
     line-height: 25px;
+    font-weight: 400;
     color: $ct-black;
 
     @include lg-block {
@@ -293,6 +323,10 @@
         @include xs-block {
             font-size: 16px;
         }
+    }
+
+    &--similar {
+        font-family: $font-family-roboto;
     }
 }
 
@@ -338,6 +372,10 @@
         max-width: 340px;
     }
 
+    &--similar {
+        @include size(6);
+    }
+
     &--s {
         @include s-block {
             display: none;
@@ -345,6 +383,8 @@
     }
 
     &__desc {
+        display: flex;
+        flex-direction: column;
         padding: 24px 16px;
 
         @include lg-block {
@@ -396,8 +436,185 @@
                 min-width: 116px;
             }
         }
+
+        &--similar {
+            img {
+                height: auto;
+            }
+        }
+    }
+}
+
+.recept-footer {
+    margin-top: auto;
+
+    &--similar {
+        padding-right: 16px;
+    }
+
+    span {
+        margin-left: 4px;
+        font-family: $font-family-roboto;
+        font-size: 14px;
+        line-height: 100%;
+        color: $ct-semi-black;
+
+        @include llg-block {
+            margin-left: 0;
+        }
+
+        @include md-block {
+            margin-left: -2px;
+            font-size: 10px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    &__item:not(:first-child) {
+        margin-left: 16px;
+
+        @include llg-block {
+            margin-left: 12px;
+        }
+    }
+
+    svg {
+        display: inline-block;
+        vertical-align: middle;
+        @include svg(16px, 14px, $ct-orange);
+
+        @include md-block {
+            @include svg(12px, 10px, $ct-orange);
+        }
     }
 }
 
 /*------------------------------------------------*/
 
+/*---------------------------------------------
+   Хлебные крошки
+---------------------------------------------*/
+.breadcrumbs {
+    &__list {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    &__item {
+
+        margin-right: 5px;
+
+        &::after {
+            content: '>>';
+            color: $ct-gray-lines;
+        }
+
+        &:last-child {
+            &:after {
+                content: none;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        font-family: $font-family-roboto;
+        font-size: 14px;
+        line-height: 100%;
+        color: $ct-semi-black;
+
+        &[aria-current=true] {
+            @include disa;
+            color: $ct-semi-black;
+        }
+    }
+}
+/*------------------------------------------------*/
+
+
+/*---------------------------------------------
+   Звездный рейтинг
+---------------------------------------------*/
+.rating {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.rating__group {
+    position: relative;
+    width: 12.5em;
+    height: 2.5em;
+    background-image: url(../img/images/star.svg);
+    background-repeat: repeat-x;
+    background-size: 2.5em auto;
+}
+
+.rating__star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2.5em;
+    margin: 0;
+    background-repeat: repeat-x;
+    background-size: 2.5em auto;
+    font-size: inherit;
+    appearance: none;
+}
+
+.rating__star:focus {
+    outline: none;
+}
+
+.rating__star:focus~.rating__focus {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    outline: 0.2em solid #4a90e2;
+    outline-offset: 0.2em;
+}
+
+.rating__star:hover,
+.rating__star:checked {
+    background-image: url(../img/images/signs.svg);
+}
+
+.rating__star:hover~.rating__star {
+    background-image: url(../img/images/star.svg);
+}
+
+.rating__star:nth-of-type(1) {
+    z-index: 5;
+    width: 2.5em;
+}
+
+.rating__star:nth-of-type(2) {
+    z-index: 4;
+    width: 5em;
+}
+
+.rating__star:nth-of-type(3) {
+    z-index: 3;
+    width: 7.5em;
+}
+
+.rating__star:nth-of-type(4) {
+    z-index: 2;
+    width: 10em;
+}
+
+.rating__star:nth-of-type(5) {
+    z-index: 1;
+    width: 12.5em;
+}
+/*------------------------------------------------*/
