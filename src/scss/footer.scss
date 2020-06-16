@@ -219,6 +219,10 @@
             &:-ms-input-placeholder {
                 @include textarea;
             }
+
+            @include md-block {
+                font-size: 12px;
+            }
         }
     }
 }
@@ -409,6 +413,15 @@
         display: flex;
         justify-content: space-between;
         list-style-type: none;
+
+        &--page-recept {
+            @include s-block {
+                justify-content: space-evenly;
+            }
+            @include xs-block {
+                justify-content: space-between;
+            }
+        }
     }
 
     &__item {

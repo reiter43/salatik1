@@ -69,6 +69,18 @@
 
     &--img-block {
         padding: 0;
+
+        @include lg-block {
+            font-size: 16px;
+        }
+
+        @include md-block {
+            font-size: 12px;
+        }
+
+        @include s-block {
+            font-size: 14px;
+        }
     }
 }
 
@@ -86,7 +98,6 @@
 }
 
 .btn-submit {
-    min-width: 200px;
     padding: 12px 54px;
     text-align: center;
     border: none;
@@ -104,6 +115,16 @@
 
     &:hover {
         opacity: 0.85;
+    }
+
+    @include llg-block {
+        font-size: 14px;
+        padding: 10px 40px;
+    }
+
+    @include md-block {
+        font-size: 10px;
+        padding: 7px 29px;
     }
 
     &--suscribe {
@@ -208,12 +229,25 @@
     display: inline-block;
     width: 32px;
     height: 32px;
-    margin-right: 12px;
+    margin-right: 10px;
     vertical-align: middle;
     border: none;
     border-radius: 50%;
     background: $ct-gray-lines;
     appearance: none;
+
+    @include lg-block {
+        width: 24px;
+        height: 24px;
+        margin-right: 6px;
+        vertical-align: text-top
+    }
+
+    @include md-block {
+        width: 18px;
+        height: 18px;
+        ;
+    }
 }
 
 .btn-comments {
@@ -227,6 +261,10 @@
     font-weight: normal;
     color: $ct-green;
     appearance: none;
+
+    @include md-block {
+        font-size: 12px;
+    }
 }
 
 /*------------------------------------------------*/
@@ -278,6 +316,10 @@
     line-height: 100%;
     font-weight: 500;
     color: $ct-black;
+
+    @include md-block {
+        font-size: 18px;
+    }
 }
 
 .title-recept {
@@ -327,6 +369,11 @@
 
     &--similar {
         font-family: $font-family-roboto;
+        line-height: 23px;
+
+        @include llg-block {
+            font-size: 17px;
+        }
     }
 }
 
@@ -342,6 +389,12 @@
     @include md-block {
         font-size: 12px;
         line-height: 14px;
+    }
+
+    &--recept {
+        @include s-block {
+            font-size: 14px;
+        }
     }
 }
 
@@ -374,6 +427,11 @@
 
     &--similar {
         @include size(6);
+        @include size-md(6);
+
+        @include s-block {
+            max-width: 400px;
+        }
     }
 
     &--s {
@@ -389,31 +447,56 @@
 
         @include lg-block {
             min-width: 136px;
-            padding: 12px 9px;
+            padding: 12px 9px 9px;
         }
 
-        p {
-            margin-top: 16px;
-            font-family: $font-family-roboto;
-            font-size: 16px;
-            line-height: 132.19%;
-            color: $ct-semi-black;
+        &--similar {
+            padding: 6% 4%;
+        }
+    }
+
+    &__slogan {
+        margin-top: 16px;
+        font-family: $font-family-roboto;
+        font-size: 15px;
+        line-height: 18px;
+        color: $ct-semi-black;
+
+        @include llg-block {
+            font-size: 14px;
+        }
+
+        @include lg-block {
+            font-size: 13px;
+        }
+
+        @include md-block {
+            margin-top: 9px;
+            font-size: 10px;
+            line-height: 12px;
+        }
+
+        @include s-block {
+            font-size: 12px;
+        }
+
+        @include xs-block {
+            font-size: 11px;
+        }
+
+        &--similar {
+            margin-top: 7.5%;
 
             @include lg-block {
-                font-size: 13px;
+                margin-top: 9px;
             }
 
             @include md-block {
-                margin-top: 9px;
-                font-size: 10px;
+                margin-top: 5px;
             }
 
             @include s-block {
-                font-size: 12px;
-            }
-
-            @include xs-block {
-                font-size: 11px;
+                margin-top: 16px;
             }
         }
     }
@@ -439,7 +522,13 @@
 
         &--similar {
             img {
-                height: auto;
+                @include lg-block {
+                    min-width: 115px;
+                }
+
+                @include md-block {
+                    min-width: 90px;
+                }
             }
         }
     }
@@ -476,7 +565,7 @@
         list-style-type: none;
     }
 
-    &__item:not(:first-child) {
+    &__item--min:not(:first-child) {
         margin-left: 16px;
 
         @include llg-block {
@@ -508,7 +597,6 @@
     }
 
     &__item {
-
         margin-right: 5px;
 
         &::after {
@@ -534,8 +622,13 @@
             @include disa;
             color: $ct-semi-black;
         }
+
+        @include xs-block {
+            font-size: 10px;
+        }
     }
 }
+
 /*------------------------------------------------*/
 
 
@@ -546,6 +639,11 @@
     margin: 0;
     padding: 0;
     border: none;
+
+    @include s-block {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .rating__group {
@@ -555,6 +653,11 @@
     background-image: url(../img/images/star.svg);
     background-repeat: repeat-x;
     background-size: 2.5em auto;
+
+    @include s-block {
+        margin-bottom: 24px;
+        margin-left: 16px;
+    }
 }
 
 .rating__star {
@@ -617,4 +720,5 @@
     z-index: 1;
     width: 12.5em;
 }
+
 /*------------------------------------------------*/

@@ -256,6 +256,10 @@
     font-size: 20px;
     line-height: 24px;
     color: $ct-semi-black;
+
+    @include md-block {
+        font-size: 12px;
+    }
 }
 
 // Неактивная ссылка

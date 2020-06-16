@@ -50,7 +50,7 @@
                                     <span>22</span>
                                 </li>
                                 <li class="page-recept__metrics-item">
-                                    <ul class="page-recept__metrics-list">
+                                    <ul class="page-recept__metrics-sublist">
                                         <li class="page-recept__metrics-subitem">
                                             <svg class="active" role="img" focusable="false" aria-current="true">
                                                 <title>Рейтинг 1</title>
@@ -84,6 +84,38 @@
                                     </ul>
                                 </li>
                             </ul>
+                            <ul class="page-recept__metrics-sublist page-recept__metrics-sublist--mob">
+                                <li class="page-recept__metrics-subitem">
+                                    <svg class="active" role="img" focusable="false" aria-current="true">
+                                        <title>Рейтинг 1</title>
+                                        <use xlink:href="img/svg/sprite.svg#star" aria-hidden="true"></use>
+                                    </svg>
+                                </li>
+                                <li class="page-recept__metrics-subitem">
+                                    <svg class="active" role="img" focusable="false" aria-current="true"> 
+                                        <title>Рейтинг 2</title>
+                                        <use xlink:href="img/svg/sprite.svg#star" aria-hidden="true"></use>
+                                    </svg>
+                                </li>
+                                <li class="page-recept__metrics-subitem">
+                                    <svg class="active" role="img" focusable="false" aria-current="true">
+                                        <title>Рейтинг 3</title>
+                                        <use xlink:href="img/svg/sprite.svg#star" aria-hidden="true"></use>
+                                    </svg>
+                                </li>
+                                <li class="page-recept__metrics-subitem">
+                                    <svg class="active" role="img" focusable="false" aria-current="true">
+                                        <title>Рейтинг 4</title>
+                                        <use xlink:href="img/svg/sprite.svg#star" aria-hidden="true"></use>
+                                    </svg>
+                                </li>
+                                <li class="page-recept__metrics-subitem">
+                                    <svg role="img" focusable="false">
+                                        <title>Рейтинг 5</title>
+                                        <use xlink:href="img/svg/sprite.svg#star" aria-hidden="true"></use>
+                                    </svg>
+                                </li>
+                            </ul>
                             <button type="button" class="btn-icon btn-icon--img-block page-recept__metrics-btn">
                                 <svg aria-hidden="true" focusable="false">
                                     <use xlink:href="img/svg/sprite.svg#heart-2"></use>
@@ -100,7 +132,7 @@
                                 <title>Время приготовления</title>
                                 <use xlink:href="img/svg/sprite.svg#time" aria-hidden="true"></use>
                             </svg>
-                            <h6 class="title-sub">20 минут</h6>
+                            <h6 class="title-sub title-sub--recept">20 минут</h6>
                         </div>
                     </div>
 
@@ -178,7 +210,7 @@
                             <h6 class="title-sub page-recept__title-sub-socials">
                                 Поделиться в социальных сетях:
                             </h6>
-                            <ul class="socials__list">
+                            <ul class="socials__list socials__list--page-recept">
                                 <li class="socials__item" style="background: #4680C2">
                                     <a href="#" class="socials__link" aria-label="Ссылка на профиль">
                                         <svg aria-hidden="true">
@@ -239,8 +271,8 @@
                         </div>
                     </div>
                     <div class="page-recept__rating">
-                        <fieldset class="rating">
-                            <legend class="title-sub page-recept__title-sub-rating">Оценить рецепт</legend>
+                        <div class="rating">
+                            <h6 class="title-sub page-recept__title-sub-rating">Оценить рецепт:</h6>
                             <div class="rating__group">
                                 <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно">
                                 <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
@@ -249,17 +281,17 @@
                                 <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
                                 <div class="rating__focus"></div>
                             </div>
-                        </fieldset>
+                        </div>
                     </div>
                 </section>
 
                 <section class="page-recept__similar-recept">
-                    <h4 class="title-section-inner">Похожие рецепты:</h4>
+                    <h4 class="title-section-inner title-section-inner--page-recept">Похожие рецепты:</h4>
                     <div class="page-recept__similar-recept-content">
                         <figure class="recept recept--similar">
-                            <figcaption class="recept__desc">
+                            <figcaption class="recept__desc recept__desc--similar">
                                 <h5 class="title-recept title-recept--similar">Бутерброд с сыром</h5>
-                                <p class="recept__slogan">Приготовь себе и близким интересный перекус</p>
+                                <p class="recept__slogan recept__slogan--similar">Приготовь себе и близким интересный перекус</p>
                                 <div class="recept-footer recept-footer--similar">
                                     <ul class="recept-footer__list">
                                         <li class="recept-footer__item">
@@ -298,9 +330,9 @@
                             </div>
                         </figure>
                         <figure class="recept recept--similar">
-                            <figcaption class="recept__desc">
+                            <figcaption class="recept__desc recept__desc--similar">
                                 <h5 class="title-recept title-recept--similar">Салат с рукколой</h5>
-                                <p class="recept__slogan">Наслаждайся вкусным салатом каждый день</p>
+                                <p class="recept__slogan recept__slogan--similar">Наслаждайся вкусным салатом каждый день</p>
                                 <div class="recept-footer recept-footer--similar">
                                     <ul class="recept-footer__list">
                                         <li class="recept-footer__item">
@@ -339,9 +371,9 @@
                             </div>
                         </figure>
                         <figure class="recept recept--similar">
-                            <figcaption class="recept__desc">
+                            <figcaption class="recept__desc recept__desc--similar">
                                 <h5 class="title-recept title-recept--similar">Бутерброд с сыром</h5>
-                                <p class="recept__slogan">Приготовь себе и близким интересный перекус</p>
+                                <p class="recept__slogan recept__slogan--similar">Приготовь себе и близким интересный перекус</p>
                                 <div class="recept-footer recept-footer--similar">
                                     <ul class="recept-footer__list">
                                         <li class="recept-footer__item">
@@ -380,9 +412,9 @@
                             </div>
                         </figure>
                         <figure class="recept recept--similar">
-                            <figcaption class="recept__desc">
+                            <figcaption class="recept__desc recept__desc--similar">
                                 <h5 class="title-recept title-recept--similar">Салат с рукколой</h5>
-                                <p class="recept__slogan">Наслаждайся вкусным салатом каждый день</p>
+                                <p class="recept__slogan recept__slogan--similar">Наслаждайся вкусным салатом каждый день</p>
                                 <div class="recept-footer recept-footer--similar">
                                     <ul class="recept-footer__list">
                                         <li class="recept-footer__item">
@@ -433,12 +465,12 @@
                         <input type="hidden" name="form_subject" value="Сайт SALATIK. Комментарий со страницы рецепта">
                         <!-- END Hidden Required Fields -->
 
-                        <label class="name form-comments__name" hidden>
+                        <label class="name form-comments__name">
                             <span class="visually-hidden">Введите Имя или никнейм(обязательное поле)</span>
                             <input class="name__input  name__input--comments" type="text" name="name" placeholder="Имя или никнейм" required="required">
                         </label>
 
-                        <label class="email" hidden>
+                        <label class="email form-comments__email">
                             <span class="visually-hidden">Введите email(обязательное поле)</span>
                             <input class="email__input  email__input--comments" type="email" name="email" placeholder="Введите ваш email" required="required">
                         </label>
@@ -465,7 +497,7 @@
                             <button class="btn-submit" type="submit">Отправить</button>
                         </div>
 
-                        <label class="checkbox-footer" hidden>
+                        <label class="checkbox-footer">
                             <input class="checkbox-footer__input" type="checkbox" name="Обработка данных" aria-checked="false">
                             <span class="checkbox-footer__fake"></span>
                             Согласие на обработку персональных данных
